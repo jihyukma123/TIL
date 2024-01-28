@@ -65,4 +65,5 @@ React Native
 
 React
 
-- 0127: useMemo & useCallback
+- 0127: useMemo
+- 0128: useCallback
