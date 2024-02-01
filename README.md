@@ -68,3 +68,7 @@ React
 - 0127: useMemo
 - 0128: useCallback
 - 0129: useRef
+
+커리어
+
+- 0201: 정말 중요한 하루.
