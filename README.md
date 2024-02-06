@@ -63,6 +63,7 @@ React Native
 - 0125: [공식문서 Architecture Overview - 1](https://reactnative.dev/architecture/overview)
 - 0126: 공식문서 Architecture Overview - 2
 - 0202: `react-native-reanimated` basics
+- 0206: [공식문서 Performance Overview](https://reactnative.dev/docs/performance)
 
 React
 
