@@ -74,3 +74,7 @@ React
 커리어
 
 - 0201: 정말 중요한 하루.
+
+JavaScript & TypeScript
+
+- 0207: type alias vs interface [공식문서](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#object-types)
