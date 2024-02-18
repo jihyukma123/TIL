@@ -28,6 +28,10 @@
 
 ### 대목표: 상용 React Native 앱을 운영하는 회사에서 RN개발자에게 요구되는 다양한 업무를 빠르고 안정감있게 수행할 수 있는 개발자가 되자.
 
+무엇보다 지금 회사에서 주어진 일을 잘 해결하고, 더 나아가서 프로젝트를 개선하기 위해서 기술적으로 기여할 수 있는 부분들을 추가로 해결해보고싶다.
+
+이 프로젝트의 성공여부가 적어도 프로덕트의 기술적인 완성도 부족은 아니도록 최선을 다해서 기여하고싶다.
+
 **세부 목표**
 
 1.React & React Native framework가 동작하는 방식 및 제공되는 API 이해
@@ -60,9 +64,7 @@
 - 왜? 개발을 잘하는 것과 별개로, 어떤 사람이 일을 `잘` 하는 사람인지에 대한 고민이 최근에 많이 됨. 혼자 고민하는 것도 좋지만 책도 읽어보고 다양한 사람들의 이야기를 읽고 들어보자.
 - `얻고자 하는 결과`: 2024년 12월 31일에는 2023년 12월 31일과 비교해서 더 일을 잘하는 노하우를 가지고 더 넒게 볼 줄 아는 사람이 되는 것. 소통이라는 것을 더 이해하고 잘 해내는 Co-Worker가 되는 것.
 
-## 1. React & React Native 공부 기록
-
-**공부가 필요한 키워드들**
+## 공부가 필요한 키워드들
 
 - React Concurrent Features
 - [fiber](https://github.com/acdlite/react-fiber-architecture#what-is-a-fiber)
@@ -76,11 +78,11 @@
 - C++ “const correctness” feature (thread safety관련해서..)
 - Render 단계는 Interruptible하다..?
 - `useNativeDriver` and thread
-- Object.is()
+- [동등 비교 및 동일성](https://developer.mozilla.org/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)
 
-**공부 기록**
+## 공부 기록
 
-React Native
+**React Native**
 
 - 0125: [공식문서 Architecture Overview - 1](https://reactnative.dev/architecture/overview)
 - 0126: 공식문서 Architecture Overview - 2
@@ -89,21 +91,25 @@ React Native
 - 0208: 원티드 React Native강의 - 퍼포먼스 최적화를 위해 사용할 수 있는 도구들
 - 0212: flipper - React DevTools
 
-React
+**React**
 
 - 0127: useMemo
 - 0128: useCallback
 - 0129: useRef
 
-커리어
-
-- 0201: 정말 중요한 하루.
-
-JavaScript & TypeScript
+**JavaScript & TypeScript**
 
 - 0207: type alias vs interface [공식문서](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#object-types)
 
-Functional Programming
+**Functional Programming**
 
 - 0208: 쏙쏙 들어오는 함수형 코딩
 - 0209: 쏙쏙 들어오는 함수형 코딩
+
+**Test Code**
+
+- 0217: Jest 테스트 코드 작성 튜토리얼 [영상](https://www.youtube.com/watch?v=AO8i0IuM0G4)
+
+**커리어**
+
+- 0201: 정말 중요한 하루. 자꾸 회고해보면서 기억을 되새겨야 한다.
