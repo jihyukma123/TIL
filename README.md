@@ -79,6 +79,7 @@
 - Render 단계는 Interruptible하다..?
 - `useNativeDriver` and thread
 - [동등 비교 및 동일성](https://developer.mozilla.org/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- Dot notating react components and async boundaries and webpack, [참고 글 및 댓글](https://dev.to/alexandprivate/react-dot-notation-component-with-ts-49k8)
 
 ## 공부 기록
 
