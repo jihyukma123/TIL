@@ -80,6 +80,12 @@
 - `useNativeDriver` and thread
 - [동등 비교 및 동일성](https://developer.mozilla.org/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)
 - Dot notating react components and async boundaries and webpack, [참고 글 및 댓글](https://dev.to/alexandprivate/react-dot-notation-component-with-ts-49k8)
+- PostgresSQL
+- ORM
+- [neon](https://neon.tech/)
+- [prisma](https://www.prisma.io/)
+- [drizzle-orm](https://github.com/drizzle-team/drizzle-orm)
+- RESTful or GraphQL endpoints
 
 ## 공부 기록
 
