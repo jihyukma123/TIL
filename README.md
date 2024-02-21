@@ -86,6 +86,11 @@
 - [prisma](https://www.prisma.io/)
 - [drizzle-orm](https://github.com/drizzle-team/drizzle-orm)
 - RESTful or GraphQL endpoints
+  - REST 단점: underfetching and overfetching
+- react native에서 모달을 매끄럽게 렌더링하고 닫는 방법, 모달의 작동 원리
+- async await 및 try catch and error handling
+  - nested function 구조에서 try catch 동작방식
+- 함수 정의 방식에 따른 기능의 차이
 
 ## 공부 기록
 
