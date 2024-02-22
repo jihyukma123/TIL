@@ -152,11 +152,11 @@ let testPr = new Promise(function (res, rej) {
   }, 1000);
 });
 
-testPr
-  .then((r) => console.log(r))
-  .finally(() => {
-    console.log("finall");
-  });
+// testPr
+//   .then((r) => console.log(r))
+//   .finally(() => {
+//     console.log("finall");
+//   });
 
 // 일단 생각을 해보자.
 
@@ -187,4 +187,43 @@ function delay(ms) {
   return new Promise((res) => setTimeout(res, ms));
 }
 
-delay(3000).then((res) => console.log(res));
+// delay(3000).then((res) => console.log(res));
+
+// setTimeout을 return하는 것과 setTimout을 execute하는 것의 결과가 동일한 이유
+
+function returnSetTimeout() {
+  return setTimeout(() => {
+    console.log("setTimeout returned from function");
+  }, 1000);
+}
+
+function executeSetTimeout() {
+  setTimeout(() => {
+    console.log("setTimeout executed inside function");
+  }, 2000);
+
+  // return 1;
+}
+
+executeSetTimeout();
+
+returnSetTimeout();
+
+// 위 두 함수는 같은 결과를 낳는다.
+
+// 왜냐하면 setTimout이 ()을 통해서 호출되는 것은 두 함수가 다 똑같기 때문이다.
+
+function log() {
+  console.log("logged");
+}
+
+function returnLog() {
+  return log();
+}
+
+function executeLog() {
+  log();
+}
+
+returnLog(); // logged
+executeLog(); // logged
