@@ -34,13 +34,14 @@ const pr2 = new Promise((resolve, reject) => {
 
 // 성공!!
 pr2.then((r) => {
-  console.log(r);
+  // console.log(r);
 });
 
 // 로직 흐름을 이해해보자.
 
 // Promise안에 전달되는 함수는 executor라고 한다고 한다.
 
+// when new Promise is created, the executor runs automatically.
 // resolve reject are callbacks provided by JavaScript itself.
 // 우리가 작성하는 코드는 executer 함수 내의 로직이다.
 // 원하는 결과가 resolve함수에 전달된 값으로 잘 처리되었을 때
@@ -67,6 +68,72 @@ function executor(resolve, reject) {
 // pr2 는 resolve 에 1초 뒤에
 const pr3 = new Promise(executor);
 
-pr3.then((r) => {
-  console.log(r);
-});
+// pr3.then((r) => {
+//   console.log(r);
+// });
+
+// Cosumers: then catch
+
+// 프로미스 객체는 executor(실제 결과를 도출하는 함수)와 결과를 받아서 사용하는 함수를 연결하는 역할을 한다.
+// 결과를 받아서 사용하는 함수는 then 와 catch 메서드를 통해서 결과에 subscribe할 수 있다.
+
+// 가장 중요한 메서드는 뭐니뭐니해도 then 이다.
+
+// then 에 전달되는 첫 번째 인자는 promise가 resolve되었을 때 실행될 함수이다.
+// then 에 전달되는 두 번째 인자는 promise가 reject되었을 때 실행될 함수이다.
+// then에서 promise resolve에 대해서만 구독하고 싶으면 함수를 하나만 전달하면 된다.
+
+// pr3.then(
+//   function (result) {
+//     // handle promise success here
+//     console.log(result);
+//   },
+//   function (error) {
+//     // when the promise is rejected, this second function is called
+//     console.log(error);
+//   }
+// );
+
+// ----- catch -----
+// catch는 에러만 다루고자 할 때 사용할 수 있는 메서드.
+// then 함수에 첫 번째 인자에 null을 전달하고, 두 번째 인자에 함수를 전달해서 에러를 handling하는것과 같은 기능을 한다.
+// 그냥 더 명확하게 error를 catch한다는 점을 드러내기 위해서 추가된듯?
+
+//----- finally -----
+
+// try...catch...finally 가 있듯이 promiseObject.then().catch().finally() 가 존재한다.
+// finally는 try catch가 있으면 무조건, 무조건 실행되는 조건이었는데 이 친구는 어떨까?
+// finally(f)는 사실상 then(f, f)와 promise가 settle되면(resolve 건 reject건) f가 항상 실행된다는 점에서 동일하다.
+// finally에 반영된 컨셉은, 이전의 실행이 완료된 이후에 어떤 cleanup/finalizing 로직을 실행할 수 있는 handler를 제공하는 것이다.
+// ex) 로딩 상태 종료, 더이상 필요없는 연결 종료 등등
+
+// finally는 인자를 받지 않는다. promise가 resolve되건 reject되건 관계없이 finally는 그런거 모르고 관심도 없어!
+// 그냥 일반적인 마무리 작업을 수행할 뿐이야 .
+
+// 그리고 finally는 promise객체가 settle된 결과를 (res or rej) 그대로 통과시켜서 다음 메서드에 넘겨준다.
+// 그래서 finally 에 then 이나 catch 를 체이닝해서 해당 결과를 구독하는 함수를 등록해서 작업을 이어나가는 것도 가능하다.
+
+pr3
+  .finally(() => {
+    console.log("마무리!");
+    // 눈에 보이지는 않지만 다음 then으로 resolve결과를 '통과'시켜줌
+  })
+  .then((r) => {
+    console.log(r);
+  });
+
+// finally는 아무것도 return하지 않아야 한다. return 문으로 명시적으로 값을 return해도 implicit하게 ignore 됨
+
+// 유일한 예외는 finally handler에서 에러를 throw하는 경우이다.
+// 이 경우 promise의 rej가 아니라 해당 에러가 다음 handler로 전달된다.
+
+pr3
+  .finally(() => {
+    throw new Error("EROROROROROORORORO!!!!!!!");
+  })
+  .then((r) => {
+    console.log(r); // resolve된 결과가 들어오지 않고
+  })
+  .catch((err) => {
+    console.log(err); // catch 메서드의 에러 구독 함수가 실행된다.
+  });
