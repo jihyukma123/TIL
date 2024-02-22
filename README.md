@@ -91,6 +91,8 @@
 - async await 및 try catch and error handling
   - nested function 구조에서 try catch 동작방식
 - 함수 정의 방식에 따른 기능의 차이
+- typeof price === 'number' && !Number.isNaN(price);
+  - typeof 로 확인하는 것과 isNaN으로 확인하는것의 차이?
 
 ## 공부 기록
 
