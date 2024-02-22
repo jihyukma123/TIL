@@ -113,27 +113,78 @@ const pr3 = new Promise(executor);
 // 그리고 finally는 promise객체가 settle된 결과를 (res or rej) 그대로 통과시켜서 다음 메서드에 넘겨준다.
 // 그래서 finally 에 then 이나 catch 를 체이닝해서 해당 결과를 구독하는 함수를 등록해서 작업을 이어나가는 것도 가능하다.
 
-pr3
-  .finally(() => {
-    console.log("마무리!");
-    // 눈에 보이지는 않지만 다음 then으로 resolve결과를 '통과'시켜줌
-  })
-  .then((r) => {
-    console.log(r);
-  });
+// pr3
+//   .finally(() => {
+//     console.log("마무리!");
+//     // 눈에 보이지는 않지만 다음 then으로 resolve결과를 '통과'시켜줌
+//   })
+//   .then((r) => {
+//     console.log(r);
+//   });
 
 // finally는 아무것도 return하지 않아야 한다. return 문으로 명시적으로 값을 return해도 implicit하게 ignore 됨
 
 // 유일한 예외는 finally handler에서 에러를 throw하는 경우이다.
 // 이 경우 promise의 rej가 아니라 해당 에러가 다음 handler로 전달된다.
 
-pr3
+// pr3
+//   .finally(() => {
+//     throw new Error("EROROROROROORORORO!!!!!!!");
+//   })
+//   .then((r) => {
+//     console.log(r); // resolve된 결과가 들어오지 않고
+//   })
+//   .catch((err) => {
+//     console.log(err); // catch 메서드의 에러 구독 함수가 실행된다.
+//   });
+
+// ------ practical example ------
+
+// re-resolve a promise?
+
+// 어떻게 이미 resolve 된 promise를 다시 resolve하는 경우 어떻게 되는가?
+
+let testPr = new Promise(function (res, rej) {
+  res(1);
+
+  setTimeout(() => {
+    res(2);
+  }, 1000);
+});
+
+testPr
+  .then((r) => console.log(r))
   .finally(() => {
-    throw new Error("EROROROROROORORORO!!!!!!!");
-  })
-  .then((r) => {
-    console.log(r); // resolve된 결과가 들어오지 않고
-  })
-  .catch((err) => {
-    console.log(err); // catch 메서드의 에러 구독 함수가 실행된다.
+    console.log("finall");
   });
+
+// 일단 생각을 해보자.
+
+// res(1)은 바로 실행될 것이다.
+// res(2)는 실행이 되어도, 구독하고 있는 함수가 없기 때문에 그냥 아무일도 안 일어나지 않을까?
+
+// 다만 setTimeout이 걸려있긴 하므로 실행자체는 된다 res(2) but has no subscribers
+
+// -> 결과:  얼추 맞았다.
+// 1만 찍힌다 왜냐하면 resolve에 대한 추가 호출은 무시된다. 오직 resolve, reject에 대한 첫 번째 호출만 처리되기 때문이다.
+// 추가적인 res, rej 함수 호출은 무시된다.
+
+// 문제2: ms 뒤에 resolve되는 promise를 return 하는 함수를 만들어라.
+// resolve가 ms뒤에 실행되도록 하면 된다ㅓ.
+
+function delay(ms) {
+  // promise에는 res, rej를 인자로 가지는 콜백함수 전달
+  // return new Promise((res, rej) => {
+  //   setTimeout(() => {
+  //     res(`resolved after ${ms}ms`);
+  //   }, ms);
+  // });
+  // 위가 내 답, 아래가 문서 답..
+  // 내가 놓친 부분이 또 있고만.
+  // 어차피 res는 그냥 필요없고, 실행만 되면 되니까 굳이 함수를 한 단계 더 wrapping할 필요가 없었다.
+  // 그리고 rej도 안쓰니까 굳이 필요없고.
+  // 근데 return setTimeout 이랑 그냥 setTimeout을 실행하는거랑 무슨 차이지
+  return new Promise((res) => setTimeout(res, ms));
+}
+
+delay(3000).then((res) => console.log(res));
