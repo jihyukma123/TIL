@@ -115,7 +115,9 @@
 **JavaScript & TypeScript**
 
 - 0207: type alias vs interface [공식문서](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#object-types)
+- 0221, 0222: Promise
 - 0223: isNaN..typeof x === number... 공부하려다가 먼저 NaN 공부
+- 0225: async function
 
 **Functional Programming**
 
