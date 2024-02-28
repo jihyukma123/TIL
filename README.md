@@ -117,6 +117,7 @@
 - 0221, 0222: Promise
 - 0223: isNaN..typeof x === number... 공부하려다가 먼저 NaN 공부
 - 0225: async function
+- 0228: Error handling in JavaScript(ing)
 
 **Functional Programming**
 
