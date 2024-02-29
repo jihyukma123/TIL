@@ -118,6 +118,7 @@
 - 0223: isNaN..typeof x === number... 공부하려다가 먼저 NaN 공부
 - 0225: async function
 - 0228: Error handling in JavaScript(ing)
+- 0229: Async Await에 대한 추가 궁금증.
 
 **Functional Programming**
 
