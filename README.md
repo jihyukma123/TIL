@@ -93,6 +93,7 @@
 - 함수 정의 방식에 따른 기능의 차이
 - typeof price === 'number' && !Number.isNaN(price);
   - typeof 로 확인하는 것과 isNaN으로 확인하는것의 차이?
+- iterator, .next() 메서드 (Map을 공부하면서 iterator를 통해서 iterate한다는 표현을 봤는데 이해하지 못했음)
 
 ## 공부 기록
 
