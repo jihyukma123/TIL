@@ -100,6 +100,8 @@
   - typeof 로 확인하는 것과 isNaN으로 확인하는것의 차이?
 - iterator, .next() 메서드 (Map을 공부하면서 iterator를 통해서 iterate한다는 표현을 봤는데 이해하지 못했음)
 - https://www.freecodecamp.org/news/execution-context-how-javascript-works-behind-the-scenes/
+- [5 async-await error handling strategies](https://www.youtube.com/watch?v=wsoQ-fgaoyQ) + 동영상 마지막에 추천하는 내용 다시 보면서 공부할 내용 추가 정리
+- 3월 8일에 작성했던 회사 코드의 문제점 파악 및 공부한 내용을 토대로 개선한 점 정리
 
 ## 공부 기록
 
@@ -126,6 +128,7 @@
 - 0225: async function
 - 0228: Error handling in JavaScript(ing)
 - 0229: Async Await에 대한 추가 궁금증.
+- 0308: async await resolve reject를 처리하는 방법에 대해서 공부(회사에서 에러핸들링 하다가 내 답답하고 가독성떨어지고 흐름 파악하기도 어려운 코드에 화가 났음..아오 답답해!!!!!)
 
 **Functional Programming**
 
