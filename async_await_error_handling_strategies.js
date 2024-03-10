@@ -42,6 +42,11 @@ try {
 // method3. mix n match - .catch();
 const myCheese = await getCheese().catch((err) => console.log(err));
 
+// 이 접근법이 해결하는 문제가 뭐지?
+// 일단 scoping문제가 해결되는 듯 하다.
+// try catch block을 사용해서 에러를 잡는 경우, try block안에서 비동기 함수가 호출되므로 함수가 처리된 결과값을 함수 밖에서 사용하려면 별개의 처리가 필요하다.
+// 하지만 이렇게 애초에 block을 형성하지 않고 처리하고 return된 promise에 대해서 필요한 경우 catch()메서드를 통해서 에러를 처리하면 block이 생성되지 않으므로 결과를 담을 변수를 바로 사용할 수 있음.
+
 // method4. bring it to a single level
 
 async function asyncWrap(promise) {
