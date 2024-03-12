@@ -110,6 +110,8 @@
 - https://www.youtube.com/watch?v=wIuVvCuiJhU
 - 마이크로서비스란?
   - MSA...마이크로서비스...등등 요즘 많이 언급되는데 뭔지 정확하게 모르고있음. 뭔지는 대략적으로라도 알고 가자.
+- Git merge strategies
+  - ort??
 
 ## 공부 기록
 
@@ -158,3 +160,4 @@
 **프로그래밍 전반에 걸쳐서 적용되는 지식들**
 
 - 0311: LSP in frontend
+- 0312: Git 기본에 대해 공부(Rebase and Merge차이 특히)
