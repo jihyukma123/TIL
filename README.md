@@ -113,6 +113,7 @@
 - Git merge strategies
   - ort??
 - 일에 대한 고민(0313)
+- https://dev.to/kylejb/a-key-difference-between-then-and-async-await-in-javascript-53e9
 
 ## 공부 기록
 
@@ -140,6 +141,7 @@
 - 0228: Error handling in JavaScript(ing)
 - 0229: Async Await에 대한 추가 궁금증.
 - 0308: async await resolve reject를 처리하는 방법에 대해서 공부(회사에서 에러핸들링 하다가 내 답답하고 가독성떨어지고 흐름 파악하기도 어려운 코드에 화가 났음..아오 답답해!!!!!)
+- 0313: async(병렬 실행 vs 순차 실행)
 
 **Functional Programming**
 
