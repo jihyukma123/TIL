@@ -114,6 +114,7 @@
   - ort??
 - 일에 대한 고민(0313)
 - https://dev.to/kylejb/a-key-difference-between-then-and-async-await-in-javascript-53e9
+  - [Merge Strategies 공식문서](https://git-scm.com/docs/merge-strategies#Documentation/merge-strategies.txt-ort)
 
 ## 공부 기록
 
