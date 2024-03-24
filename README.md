@@ -126,6 +126,7 @@
 - 0206: [공식문서 Performance Overview](https://reactnative.dev/docs/performance)
 - 0208: 원티드 React Native강의 - 퍼포먼스 최적화를 위해 사용할 수 있는 도구들
 - 0212: flipper - React DevTools
+- 0322: reanimated 공부
 
 **React**
 
