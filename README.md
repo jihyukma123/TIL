@@ -82,7 +82,6 @@
 - C++ “const correctness” feature (thread safety관련해서..)
 - Render 단계는 Interruptible하다..?
 - `useNativeDriver` and thread
-- [동등 비교 및 동일성](https://developer.mozilla.org/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)
 - Dot notating react components and async boundaries and webpack, [참고 글 및 댓글](https://dev.to/alexandprivate/react-dot-notation-component-with-ts-49k8)
 - PostgresSQL
 - ORM
@@ -112,9 +111,10 @@
   - MSA...마이크로서비스...등등 요즘 많이 언급되는데 뭔지 정확하게 모르고있음. 뭔지는 대략적으로라도 알고 가자.
 - Git merge strategies
   - ort??
-- 일에 대한 고민(0313)
 - https://dev.to/kylejb/a-key-difference-between-then-and-async-await-in-javascript-53e9
   - [Merge Strategies 공식문서](https://git-scm.com/docs/merge-strategies#Documentation/merge-strategies.txt-ort)
+- SwiftUI앱에서 UIKit을 wrapping해서 사용하거나, 아니면 Storyboard로 만든 컴포넌트 사용하는 방법
+- Android에서 백그라운드 작업을 할 수 있는 방법들(local push notification)
 
 ## 공부 기록
 
@@ -144,6 +144,7 @@
 - 0229: Async Await에 대한 추가 궁금증.
 - 0308: async await resolve reject를 처리하는 방법에 대해서 공부(회사에서 에러핸들링 하다가 내 답답하고 가독성떨어지고 흐름 파악하기도 어려운 코드에 화가 났음..아오 답답해!!!!!)
 - 0313: async(병렬 실행 vs 순차 실행)
+- 0325: JavaScript getDay()
 
 **Functional Programming**
 
