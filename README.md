@@ -115,6 +115,7 @@
   - [Merge Strategies 공식문서](https://git-scm.com/docs/merge-strategies#Documentation/merge-strategies.txt-ort)
 - SwiftUI앱에서 UIKit을 wrapping해서 사용하거나, 아니면 Storyboard로 만든 컴포넌트 사용하는 방법
 - Android에서 백그라운드 작업을 할 수 있는 방법들(local push notification)
+- leetcode 41번 문제 constant space로 풀어내기
 
 ## 공부 기록
 
