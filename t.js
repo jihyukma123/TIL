@@ -1,40 +1,59 @@
-// 비동기적으로 resolve되는 promise를 반환하는 함수
-function returnPromise() {
-  return new Promise((res, rej) => {
-    setTimeout(() => {
-      res("mock api call result");
-    }, 2000);
-  });
-}
+// 다양한 제약조건이 있는 subarray를 구하는 종류의 문제를 풀기 위해서 기본적으로 필요한 접근법
 
-async function tryCatchAsyncFunc() {
-  try {
-    const result = await returnPromise();
+// 이중 for문으로 모든 부분배열 구하기
+function getAllSubArrays(arr) {
+  const result = [];
 
-    console.log("tryCatchAsyncFunc안에서 처리된 결과");
-    console.log(result);
-    console.log("");
-  } catch (error) {
-    console.log(error);
+  for (let i = 0; i < arr.length; i++) {
+    // 이번 요소로 시작하는 부분배열 저장할 배열
+    const tempSubArray = [];
+
+    for (let j = i; j < arr.length; j++) {
+      // 부분배열에 요소 추가
+      tempSubArray.push(arr[j]);
+
+      // 해당 시점 부분배열 저장
+      result.push([...tempSubArray]);
+    }
   }
+
+  return result;
 }
 
-function SomeComponentMock() {
-  // 컴포넌트라고 치자..
-  // 컴포넌트 안에서 try catch문으로 비동기 호출을 처리하는 함수를 호출하는 상황임
+// 713. SubArray product less than K
+// var numSubarrayProductLessThanK = function (nums, k) {
+//   // 이중 for문을 이용한 풀이 시도
+//   let answer = 0;
 
-  const callResult = tryCatchAsyncFunc();
-  console.log("동기적으로 함수 실행한 경우");
-  console.log(callResult);
-}
+//   for (let i = 0; i < nums.length; i++) {
+//     let product = 1; // 곱을 구하는 문제
 
-async function SomeComponentMock2() {
-  const callResult = await tryCatchAsyncFunc();
+//     for (let j = i; j < nums.length; j++) {
+//       product = nums[j] * product;
+//       if (product < k) {
+//         answer++;
+//       } else {
+//         break;
+//       }
+//     }
+//   }
 
-  console.log("async await로 실행 함수를 감싼 경우");
-  console.log(callResult);
-  console.log("");
-}
+//   return answer;
+// };
 
-SomeComponentMock();
-SomeComponentMock2();
+var numSubarrayProductLessThanK = function (nums, k) {
+  // sliding window 기법을 활용한 풀이
+  let subArrayCount = 0;
+
+  let left = 0;
+  let right = 0;
+
+  let product = 1;
+
+  while (right < nums.length) {
+    // 곱한다.
+    product = product * nums[right];
+
+    // 만약에 값이 초과했으면, 처리한다.
+  }
+};
