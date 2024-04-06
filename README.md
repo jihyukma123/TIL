@@ -148,7 +148,7 @@
 - 0308: async await resolve reject를 처리하는 방법에 대해서 공부(회사에서 에러핸들링 하다가 내 답답하고 가독성떨어지고 흐름 파악하기도 어려운 코드에 화가 났음..아오 답답해!!!!!)
 - 0313: async(병렬 실행 vs 순차 실행)
 - 0325: JavaScript getDay()
-- 0404: 재귀함수 안에서 return statement를 써야하는 이유(릿코드 데일리 1544)
+- 0406: 재귀함수 안에서 return statement를 써야하는 이유(릿코드 데일리 1544)
 
 **Functional Programming**
 
