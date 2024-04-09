@@ -117,6 +117,14 @@
 - Android에서 백그라운드 작업을 할 수 있는 방법들(local push notification)
 - leetcode 41번 문제 constant space로 풀어내기
 - https://www.freecodecamp.org/news/reactive-programming-beginner-guide/?ref=dailydev
+- bun (vs nodejs)
+- react-native-flash-calendar
+- Flashlist
+- [React Native App performance is a myth?](https://anil-gudigar.medium.com/react-native-app-performance-is-a-myth-dfe7b141b812)
+- Compositions over inheritance or mixins
+  - [I'm a programmer and I'm stupid](https://antonz.org/stupid/)
+  - [상속보다는 조합을 사용하자.](https://tecoble.techcourse.co.kr/post/2020-05-18-inheritance-vs-composition/)
+- 점검해볼만한 캘린더 라이브러리 [flash-calendar](https://marceloprado.github.io/flash-calendar/)
 
 ## 공부 기록
 
@@ -148,7 +156,9 @@
 - 0308: async await resolve reject를 처리하는 방법에 대해서 공부(회사에서 에러핸들링 하다가 내 답답하고 가독성떨어지고 흐름 파악하기도 어려운 코드에 화가 났음..아오 답답해!!!!!)
 - 0313: async(병렬 실행 vs 순차 실행)
 - 0325: JavaScript getDay()
-- 0406: 재귀함수 안에서 return statement를 써야하는 이유(릿코드 데일리 1544)
+- 0406
+  - 재귀함수 안에서 return statement를 써야하는 이유(릿코드 데일리 1544)
+  - JavaScript Scope Chain and variable shadowing
 
 **Functional Programming**
 
