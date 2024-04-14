@@ -126,6 +126,7 @@
   - [상속보다는 조합을 사용하자.](https://tecoble.techcourse.co.kr/post/2020-05-18-inheritance-vs-composition/)
 - 점검해볼만한 캘린더 라이브러리 [flash-calendar](https://marceloprado.github.io/flash-calendar/)
 - [Should You Still Learn To Code? | Prime Reacts](https://www.youtube.com/watch?v=2J-8iMNYSyQ&t=9s)
+- 0414에 봤던 useReducer 관련 내용에 대한 [블로그 글](https://www.builder.io/blog/use-reducer)
 
 ## 공부 기록
 
