@@ -128,6 +128,8 @@
 - [Should You Still Learn To Code? | Prime Reacts](https://www.youtube.com/watch?v=2J-8iMNYSyQ&t=9s)
 - 0414에 봤던 useReducer 관련 내용에 대한 [블로그 글](https://www.builder.io/blog/use-reducer)
 - [가십프로젝트 이슈 - FlatList가 데이터 업데이트 시 두 번째 요소가 최상단에 보이는 이슈 원인 파악 필요](https://github.com/GASIP-PROJECT/gasip-frontend/issues/21)
+- Gasip프로젝트에서, FlatList 를 View로 감싼케이스와 그렇지 않은 케이스에 렌더링이 달라지는 원인 파악 필요
+- SafeAreaProvider, Global Modal...
 
 ## 공부 기록
 
