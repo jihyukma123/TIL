@@ -130,6 +130,7 @@
 - [가십프로젝트 이슈 - FlatList가 데이터 업데이트 시 두 번째 요소가 최상단에 보이는 이슈 원인 파악 필요](https://github.com/GASIP-PROJECT/gasip-frontend/issues/21)
 - Gasip프로젝트에서, FlatList 를 View로 감싼케이스와 그렇지 않은 케이스에 렌더링이 달라지는 원인 파악 필요
 - SafeAreaProvider, Global Modal...
+- 회사 프로젝트 관련 이슈 -> setTimeout과 setInterval에서 useState값을 참조하는 과정에서 생각처럼 동작하지 않는 원인 이해 필요
 
 ## 공부 기록
 
