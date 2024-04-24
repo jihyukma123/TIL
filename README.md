@@ -131,6 +131,7 @@
 - Gasip프로젝트에서, FlatList 를 View로 감싼케이스와 그렇지 않은 케이스에 렌더링이 달라지는 원인 파악 필요
 - SafeAreaProvider, Global Modal...
 - 회사 프로젝트 관련 이슈 -> setTimeout과 setInterval에서 useState값을 참조하는 과정에서 생각처럼 동작하지 않는 원인 이해 필요
+- JavaScript에서 this와 arrow function(왜 객체 메서드로 arrow function을 할당시키는 형태로 구현 시 this가 객체가 되지 않는지)
 
 ## 공부 기록
 
