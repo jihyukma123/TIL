@@ -1,5 +1,9 @@
 # TIL
 
+## How to be a good Software Engineer?
+
+> You try to understand things - how it works, and try really really hard to understand how to make things work. These are the key traits of a software engineer
+
 ## Action plans
 
 공부하면서 얻은 인사이트를 토대로 올해 어떤 일을 할 때 실행할 액션 플랜 목록
@@ -128,7 +132,6 @@
 - leetcode 41번 문제 constant space로 풀어내기
 - https://www.freecodecamp.org/news/reactive-programming-beginner-guide/?ref=dailydev
 - bun (vs nodejs)
-- react-native-flash-calendar
 - Flashlist
 - [React Native App performance is a myth?](https://anil-gudigar.medium.com/react-native-app-performance-is-a-myth-dfe7b141b812)
 - Compositions over inheritance or mixins
