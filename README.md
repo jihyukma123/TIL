@@ -159,6 +159,7 @@
 - 0212: flipper - React DevTools
 - 0322: reanimated 공부
 - 0402: React Native 앱에서 글로벌하게 모달 구현하는 방법(ing)
+- 0501: RN앱에서 왜 boot splash screen 관련 라이브러리를 사용하는지.
 
 **React**
 
