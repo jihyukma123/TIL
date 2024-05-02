@@ -147,6 +147,7 @@
 - JavaScript에서 this와 arrow function(왜 객체 메서드로 arrow function을 할당시키는 형태로 구현 시 this가 객체가 되지 않는지)
 - 회사 업무 하면서 고민되었던 내용 -> 별도 모듈로 객체로 선언해서 export해서 사용하는 것과, 함수를 선언해서 다른 모듈에서 함수를 호출해서 특정 값과 메서드(함수)들을 사용하는 것의 차이? 장단점? 적절한 상황? 등에 대해서 고민이 필요할 듯.
 - https://meganslo.medium.com/why-is-reacts-key-prop-important-b6bd51124270
+- 왜 JSI를 C++로 작성했을까?
 
 ## 공부 기록
 
@@ -160,6 +161,8 @@
 - 0212: flipper - React DevTools
 - 0322: reanimated 공부
 - 0402: React Native 앱에서 글로벌하게 모달 구현하는 방법(ing)
+- 0409: React Native New Architecture - 개념, 구 아키텍처의 문제점, Codegen
+  - 0502: JSI
 - 0501: RN앱에서 왜 boot splash screen 관련 라이브러리를 사용하는지.
 
 **React**
