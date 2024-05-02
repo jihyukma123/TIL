@@ -146,6 +146,7 @@
 - 회사 프로젝트 관련 이슈 -> setTimeout과 setInterval에서 useState값을 참조하는 과정에서 생각처럼 동작하지 않는 원인 이해 필요
 - JavaScript에서 this와 arrow function(왜 객체 메서드로 arrow function을 할당시키는 형태로 구현 시 this가 객체가 되지 않는지)
 - 회사 업무 하면서 고민되었던 내용 -> 별도 모듈로 객체로 선언해서 export해서 사용하는 것과, 함수를 선언해서 다른 모듈에서 함수를 호출해서 특정 값과 메서드(함수)들을 사용하는 것의 차이? 장단점? 적절한 상황? 등에 대해서 고민이 필요할 듯.
+- https://meganslo.medium.com/why-is-reacts-key-prop-important-b6bd51124270
 
 ## 공부 기록
 
