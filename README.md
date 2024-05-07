@@ -151,6 +151,10 @@
 - Xcode schemes이 무엇인지
 - 안드로이드에서 앱을 릴리즈 버전으로 빌드할 때 요구되는 `private signing key`가 무엇인지
 - RN앱을 debug 모드로 빌드했을 때 퍼포먼스가 느려지는 이유 [참고할만한 글](https://dev.to/paddy57/why-app-gets-slow-in-debug-mode-react-native-191d#:~:text=When%20we%20switch%20on%20Debug,interaction%20with%20app%20gets%20slow.)
+- Flashlight for performance 측정 RN
+- async 함수 실행 시 어디까지 async로 entitle 해야하는지?
+- RN상에서 하단 SafeAreaInset을 어떻게 처리해야 하는지? iOS 및 Android
+- RN에서 shadow를 처리하는 원리
 
 ## 공부 기록
 
