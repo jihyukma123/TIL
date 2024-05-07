@@ -148,6 +148,9 @@
 - 회사 업무 하면서 고민되었던 내용 -> 별도 모듈로 객체로 선언해서 export해서 사용하는 것과, 함수를 선언해서 다른 모듈에서 함수를 호출해서 특정 값과 메서드(함수)들을 사용하는 것의 차이? 장단점? 적절한 상황? 등에 대해서 고민이 필요할 듯.
 - https://meganslo.medium.com/why-is-reacts-key-prop-important-b6bd51124270
 - 왜 JSI를 C++로 작성했을까?
+- Xcode schemes이 무엇인지
+- 안드로이드에서 앱을 릴리즈 버전으로 빌드할 때 요구되는 `private signing key`가 무엇인지
+- RN앱을 debug 모드로 빌드했을 때 퍼포먼스가 느려지는 이유 [참고할만한 글](https://dev.to/paddy57/why-app-gets-slow-in-debug-mode-react-native-191d#:~:text=When%20we%20switch%20on%20Debug,interaction%20with%20app%20gets%20slow.)
 
 ## 공부 기록
 
