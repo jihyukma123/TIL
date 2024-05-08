@@ -4,6 +4,8 @@
 
 > You try to understand things - how it works, and try really really hard to understand how to make things work. These are the key traits of a software engineer
 
+> Always ask the question. WHY? W.H.Y.
+
 ## Action plans
 
 공부하면서 얻은 인사이트를 토대로 올해 어떤 일을 할 때 실행할 액션 플랜 목록
@@ -155,6 +157,7 @@
 - async 함수 실행 시 어디까지 async로 entitle 해야하는지?
 - RN상에서 하단 SafeAreaInset을 어떻게 처리해야 하는지? iOS 및 Android
 - RN에서 shadow를 처리하는 원리
+- 의존성 주입 && React Context for dependency injection and not state management
 
 ## 공부 기록
 
