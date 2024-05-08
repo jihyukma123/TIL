@@ -158,6 +158,8 @@
 - RN상에서 하단 SafeAreaInset을 어떻게 처리해야 하는지? iOS 및 Android
 - RN에서 shadow를 처리하는 원리
 - 의존성 주입 && React Context for dependency injection and not state management
+  - https://blog.isquaredsoftware.com/2021/01/context-redux-differences/
+  - https://blog.testdouble.com/posts/2021-03-19-react-context-for-dependency-injection-not-state/ 
 
 ## 공부 기록
 
