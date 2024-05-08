@@ -159,7 +159,8 @@
 - RN에서 shadow를 처리하는 원리
 - 의존성 주입 && React Context for dependency injection and not state management
   - https://blog.isquaredsoftware.com/2021/01/context-redux-differences/
-  - https://blog.testdouble.com/posts/2021-03-19-react-context-for-dependency-injection-not-state/ 
+  - https://blog.testdouble.com/posts/2021-03-19-react-context-for-dependency-injection-not-state/
+- Always remember you can use component composition (https://albertgao.xyz/2022/02/19/react-state-management-libraries-2022/)
 
 ## 공부 기록
 
