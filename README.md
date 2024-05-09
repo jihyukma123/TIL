@@ -161,6 +161,7 @@
   - https://blog.isquaredsoftware.com/2021/01/context-redux-differences/
   - https://blog.testdouble.com/posts/2021-03-19-react-context-for-dependency-injection-not-state/
 - Always remember you can use component composition (https://albertgao.xyz/2022/02/19/react-state-management-libraries-2022/)
+- https://react.dev/reference/react/useEffect#fetching-data-with-effects
 
 ## 공부 기록
 
