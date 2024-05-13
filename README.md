@@ -162,6 +162,7 @@
   - https://blog.testdouble.com/posts/2021-03-19-react-context-for-dependency-injection-not-state/
 - Always remember you can use component composition (https://albertgao.xyz/2022/02/19/react-state-management-libraries-2022/)
 - https://react.dev/reference/react/useEffect#fetching-data-with-effects
+- 0513 Pressable과 Zustand store값 그리고 synthetic event에러
 
 ## 공부 기록
 
