@@ -164,6 +164,7 @@
 - https://react.dev/reference/react/useEffect#fetching-data-with-effects
 - 0513 Pressable과 Zustand store값 그리고 synthetic event에러
 - 0515 KeyboardAvoidingView
+- https://blog.inkdrop.app/how-i-improved-my-react-native-app-50x-faster-13d566061e84
 
 ## 공부 기록
 
