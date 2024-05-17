@@ -165,6 +165,9 @@
 - 0513 Pressable과 Zustand store값 그리고 synthetic event에러
 - 0515 KeyboardAvoidingView
 - https://blog.inkdrop.app/how-i-improved-my-react-native-app-50x-faster-13d566061e84
+- offset을 이용한 pagination이 괜찮을지와, cursor 기반 pagination을 적용해야 되는 필요성에 대해서 고민.(성능 관점에서 테스트 필요)
+- 검색 기능 구현 시, 검색결과가 있는 상태에서 새로운 검색어 입력해서 검색 시 기존 검색결과 화면에서 어떻게 새로운 검색결과 화면으로 전환되는지 다른 앱들 사용성 체험
+- page.current를 초기화 하는 코드를 useEffect로 검색어 변경 시 처리되도록 구현하였는데, 최선의 구현 방법인지 잘 모르겠다는 생각이 들었음(최선이 아니라도, 괜찮은 방식인지에 대해서, 코드에 대해서 고민이 필요)
 
 ## 공부 기록
 
@@ -181,6 +184,7 @@
 - 0409: React Native New Architecture - 개념, 구 아키텍처의 문제점, Codegen
   - 0502: JSI
 - 0501: RN앱에서 왜 boot splash screen 관련 라이브러리를 사용하는지.
+- 0517: RN앱에서 FlatList를 활용한 pagination구현 시 발생한 문제점 해결 및 추가 의문들
 
 **React**
 
@@ -231,3 +235,4 @@
 
 - 0311: LSP in frontend
 - 0312: Git 기본에 대해 공부(Rebase and Merge차이 특히)
+- 0517: Pagination의 의미 및 방법들.
