@@ -170,6 +170,7 @@
 - page.current를 초기화 하는 코드를 useEffect로 검색어 변경 시 처리되도록 구현하였는데, 최선의 구현 방법인지 잘 모르겠다는 생각이 들었음(최선이 아니라도, 괜찮은 방식인지에 대해서, 코드에 대해서 고민이 필요)
 - 페이지네이션 구현하기 위해서 page를 관리하는 방법을 useState로 할 때 async한 업데이트 때문에 이슈가 있어서 useRef로 처리하였는데, 이러한 이유로 useRef를 사용하는게 맞을지? useRef는 값이 synchronous 하게 업데이트 되는지?
 - FlatList, onEndReached, onEndReachedThreshold에 대한 이해
+- https://dev.to/zacharylee/build-your-own-reactjs-in-400-lines-of-code-3l1e?ref=dailydev
 
 ## 공부 기록
 
