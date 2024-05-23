@@ -173,6 +173,7 @@
 - https://dev.to/zacharylee/build-your-own-reactjs-in-400-lines-of-code-3l1e?ref=dailydev
 - https://github.com/facebook/react/issues/14110
 - https://github.com/facebook/react/issues/15156#issuecomment-474590693
+- 개발사 WhiteSpectre -> React Native관련 블로그 글 제공됨 확인 필요
 
 ## 공부 기록
 
