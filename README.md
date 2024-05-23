@@ -171,6 +171,8 @@
 - 페이지네이션 구현하기 위해서 page를 관리하는 방법을 useState로 할 때 async한 업데이트 때문에 이슈가 있어서 useRef로 처리하였는데, 이러한 이유로 useRef를 사용하는게 맞을지? useRef는 값이 synchronous 하게 업데이트 되는지?
 - FlatList, onEndReached, onEndReachedThreshold에 대한 이해
 - https://dev.to/zacharylee/build-your-own-reactjs-in-400-lines-of-code-3l1e?ref=dailydev
+- https://github.com/facebook/react/issues/14110
+- https://github.com/facebook/react/issues/15156#issuecomment-474590693
 
 ## 공부 기록
 
