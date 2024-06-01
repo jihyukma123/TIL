@@ -177,6 +177,7 @@
 - `reanimated-color-picker`를 `react-native-reanimated` 버전 2.x 와 함께 사용하는 경우 onChange에 전달된 함수가 실행되지 않는 이슈와, 전달된 함수를 'worklet' 함수로 처리시 실행되는 것에 대해서 알아보기.
 - About creating relationships and personalized experiences. [Become excellent. Be unreasonable. | Will Guidara for Big Think+](https://www.youtube.com/watch?v=wIRuMJj_igE)
 - [Software Mansion의 React Native용 VSCode IDE Extension(beta)](https://github.com/software-mansion/react-native-ide)
+- remeda
 
 ## 공부 기록
 
