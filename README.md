@@ -178,6 +178,7 @@
 - About creating relationships and personalized experiences. [Become excellent. Be unreasonable. | Will Guidara for Big Think+](https://www.youtube.com/watch?v=wIRuMJj_igE)
 - [Software Mansion의 React Native용 VSCode IDE Extension(beta)](https://github.com/software-mansion/react-native-ide)
 - remeda
+- [개발자도 회사의 조직원이다](https://www.thestartupbible.com/2024/03/business-before-technology.html)
 
 ## 공부 기록
 
