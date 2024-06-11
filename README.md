@@ -179,6 +179,7 @@
 - [Software Mansion의 React Native용 VSCode IDE Extension(beta)](https://github.com/software-mansion/react-native-ide)
 - remeda
 - [개발자도 회사의 조직원이다](https://www.thestartupbible.com/2024/03/business-before-technology.html)
+- [짐켈러 본질에 대한 이야기](https://www.youtube.com/watch?v=iwXr1IRaqWA)
 
 ## 공부 기록
 
