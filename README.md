@@ -180,6 +180,7 @@
 - remeda
 - [개발자도 회사의 조직원이다](https://www.thestartupbible.com/2024/03/business-before-technology.html)
 - [짐켈러 본질에 대한 이야기](https://www.youtube.com/watch?v=iwXr1IRaqWA)
+- [Memory in JavaScript](https://medium.com/walkme-engineering/memory-in-javascript-beyond-leaks-8c1d697c655c)
 
 ## 공부 기록
 
