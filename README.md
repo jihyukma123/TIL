@@ -183,6 +183,7 @@
 - [Memory in JavaScript](https://medium.com/walkme-engineering/memory-in-javascript-beyond-leaks-8c1d697c655c)
 - https://www.youtube.com/watch?v=2JmfDKOyQcI
 - https://www.youtube.com/watch?v=suATPK45sjk
+- 0618: 휴식타이머 이슈 추적하는 과정에서 삽질의 원인이 되었던 부족 채우기
 
 ## 공부 기록
 
@@ -251,3 +252,4 @@
 - 0311: LSP in frontend
 - 0312: Git 기본에 대해 공부(Rebase and Merge차이 특히)
 - 0517: Pagination의 의미 및 방법들.
+- 0618: 휴식타이머 이슈 원인 추적 과정에 대한 정리 및 회고
