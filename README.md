@@ -184,6 +184,7 @@
 - https://www.youtube.com/watch?v=2JmfDKOyQcI
 - https://www.youtube.com/watch?v=suATPK45sjk
 - 0618: 휴식타이머 이슈 추적하는 과정에서 삽질의 원인이 되었던 부족 채우기
+- JavaScript에서 어떻게 import를 통해서 다른 모듈의 코드를 불러와서 쓸 수 있는지? what makes this possible?
 
 ## 공부 기록
 
