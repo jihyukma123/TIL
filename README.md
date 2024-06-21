@@ -184,8 +184,13 @@
 - https://www.youtube.com/watch?v=2JmfDKOyQcI
 - https://www.youtube.com/watch?v=suATPK45sjk
 - 0618: 휴식타이머 이슈 추적하는 과정에서 삽질의 원인이 되었던 부족 채우기
-- JavaScript에서 어떻게 import를 통해서 다른 모듈의 코드를 불러와서 쓸 수 있는지? what makes this possible?
-- https://www.starterstory.com/ 
+- JavaScript에서 어떻게 import를 통해서 다른 모듈의 코드를 불러와서 쓸 수 있는지? what makes this possible? -> ES6모듈이 동작하는 방식
+- ES6 모듈에 대한 궁금증
+  - RN 프로젝트 내에 선언된 ES모듈은 그러면 설명대로, 최초로 import될 때 인스턴스가 생성되는가?
+  - 생성된 instance의 lifetime은 어떻게 되는지?
+  - 이게 실제로는 어디에 유지되는걸까?
+  - JavaScript를 활용한다는 측면에서 결국 어떻게 연결되는 것일까 모바일 개발에서
+  - export하는 요소가 하나도 없는 모듈은 참조가 되지 않아서 전혀 실행되지 않는가?
 
 ## 공부 기록
 
