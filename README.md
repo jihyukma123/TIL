@@ -191,6 +191,10 @@
   - 이게 실제로는 어디에 유지되는걸까?
   - JavaScript를 활용한다는 측면에서 결국 어떻게 연결되는 것일까 모바일 개발에서
   - export하는 요소가 하나도 없는 모듈은 참조가 되지 않아서 전혀 실행되지 않는가?
+- onLayout이 꼭 요소 순서대로 처리되지 않는다는 점..(가십, 대댓글로 스크롤되는 기능 관련)
+- JavaScript는 왜 싱글스레드로 흔히 알려져있는지? 왜 그렇게 만들어졌는지 그리고 싱글스레드라는 것의 진정한 의미? 그리고 그것이 실제 JavaScript 코드 작성/사용에 있어서 어떤 영향이 있는지??
+- async 안에서 await 구문이 있는데, return 문이 실행되는지 여부
+- top level await가 지원되는 경우
 
 ## 공부 기록
 
@@ -224,13 +228,14 @@
 - 0223: isNaN..typeof x === number... 공부하려다가 먼저 NaN 공부
 - 0225: async function
 - 0228: Error handling in JavaScript(ing)
-- 0229: Async Await에 대한 추가 궁금증.
+- 0229: Async Await에 대한 추가 궁금증. -> 여기서 추가로 궁금한 내용은 6월 22일 내용 확인
 - 0308: async await resolve reject를 처리하는 방법에 대해서 공부(회사에서 에러핸들링 하다가 내 답답하고 가독성떨어지고 흐름 파악하기도 어려운 코드에 화가 났음..아오 답답해!!!!!)
 - 0313: async(병렬 실행 vs 순차 실행)
 - 0325: JavaScript getDay()
 - 0406
   - 재귀함수 안에서 return statement를 써야하는 이유(릿코드 데일리 1544)
   - JavaScript Scope Chain and variable shadowing
+- 0622: async await의 정확한 스펙/실행흐름 등에 대해서 딥다이브
 
 **Functional Programming**
 
