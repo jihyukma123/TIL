@@ -196,6 +196,7 @@
 - async 안에서 await 구문이 있는데, return 문이 실행되는지 여부
 - top level await가 지원되는 경우
 - tidy first by kent beck
+- quodana
 
 ## 공부 기록
 
