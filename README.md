@@ -197,6 +197,10 @@
 - top level await가 지원되는 경우
 - tidy first by kent beck
 - quodana
+- https://boz.com/
+- https://newsletter.posthog.com/
+- https://newsletter.getdx.com/p/great-engineers?mkt_tok=MzgyLUpaQi03OTgAAAGGiVI4NvbysgUdcwUdl6BG8_MzpdLREQAqBDiwecvl9jpeV3VzfEazqA4RZg2KG7nAqpkQPtZl4mj8a-gO2hj_irQ9F5BVD3uisIupJkjAOg&utm_source=pocket_reader
+- https://posthog.com/founders/what-recruiters-see
 
 ## 공부 기록
 
