@@ -242,6 +242,7 @@
   - 재귀함수 안에서 return statement를 써야하는 이유(릿코드 데일리 1544)
   - JavaScript Scope Chain and variable shadowing
 - 0622: async await의 정확한 스펙/실행흐름 등에 대해서 딥다이브
+- 0625: Promise.race()
 
 **Functional Programming**
 
