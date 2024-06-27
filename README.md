@@ -4,7 +4,7 @@
 
 > You try to understand things - how it works, and try really really hard to understand how to make things work. These are the key traits of a software engineer
 
-> Always ask the question. WHY? W.H.Y.
+> Always ask the question. WHY?
 
 ## Action plans
 
@@ -201,6 +201,7 @@
 - https://newsletter.posthog.com/
 - https://newsletter.getdx.com/p/great-engineers?mkt_tok=MzgyLUpaQi03OTgAAAGGiVI4NvbysgUdcwUdl6BG8_MzpdLREQAqBDiwecvl9jpeV3VzfEazqA4RZg2KG7nAqpkQPtZl4mj8a-gO2hj_irQ9F5BVD3uisIupJkjAOg&utm_source=pocket_reader
 - https://posthog.com/founders/what-recruiters-see
+- https://medium.com/walkme-engineering/memory-in-javascript-beyond-leaks-8c1d697c655c
 
 ## 공부 기록
 
