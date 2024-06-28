@@ -203,6 +203,7 @@
 - https://posthog.com/founders/what-recruiters-see
 - https://medium.com/walkme-engineering/memory-in-javascript-beyond-leaks-8c1d697c655c
 - study react-native-gesture-handler code
+- xml 파일내 xml 선언이 최상단에 존재해야된다는 제약사항이 모든 xml 파일에 대해서 적용되는 것인지?
 
 ## 공부 기록
 
