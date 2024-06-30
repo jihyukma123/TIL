@@ -222,6 +222,7 @@
   - 0502: JSI
 - 0501: RN앱에서 왜 boot splash screen 관련 라이브러리를 사용하는지.
 - 0517: RN앱에서 FlatList를 활용한 pagination구현 시 발생한 문제점 해결 및 추가 의문들
+- 0630: Kotlin udemy course
 
 **React**
 
