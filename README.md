@@ -205,6 +205,7 @@
 - study react-native-gesture-handler code
 - xml 파일내 xml 선언이 최상단에 존재해야된다는 제약사항이 모든 xml 파일에 대해서 적용되는 것인지?
 - Android - `edgeToEdge` API
+- Gasip 비밀번호 재설정화면 만들다가..으억...
 
 ## 공부 기록
 
