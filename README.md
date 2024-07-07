@@ -209,6 +209,7 @@
 - `react native under the hood`
 - es6 모듈 초기화 시점(top level await 공부할때였나 뭔가 이 관련 자료를 본적이 있는데..)
 - [XY문제](https://namu.wiki/w/XY%20%EB%AC%B8%EC%A0%9C)에 대해서 생각해보기.
+- [Null References: The Billion Dollar Mistake - Tony Hoare](https://www.youtube.com/watch?v=ybrQvs4x0Ps)
 
 ## 공부 기록
 
