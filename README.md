@@ -211,6 +211,7 @@
 - [XY문제](https://namu.wiki/w/XY%20%EB%AC%B8%EC%A0%9C)에 대해서 생각해보기.
 - [Null References: The Billion Dollar Mistake - Tony Hoare](https://www.youtube.com/watch?v=ybrQvs4x0Ps)
 - adb(adb shell, adb -s, adb reverse 등등) 안드로이드 관련해서 필요한 지식
+- MySQL vs NoSQL
 
 ## 공부 기록
 
