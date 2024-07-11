@@ -213,6 +213,7 @@
 - adb(adb shell, adb -s, adb reverse 등등) 안드로이드 관련해서 필요한 지식
 - MySQL vs NoSQL
 - https://github.com/facebook/react-native/tree/main/packages/react-native/ReactAndroid/src/main/java/com/facebook/react/bridge
+- [JS] object getter, defineProperty, function call overhead
 
 ## 공부 기록
 
