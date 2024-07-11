@@ -288,10 +288,12 @@
 - 0618: 휴식타이머 이슈 원인 추적 과정에 대한 정리 및 회고
 - 0622: “가독성 좋은 코드” 란 무엇일까?(토스 컨텐츠)
 - 0630: 당연하지만 놓치기 쉬운, 서비스 개발자라면 인지해야될 예외처리에 대한 반성
+- 0704: [The Death of the Junior Developer](https://sourcegraph.com/blog/the-death-of-the-junior-developer?ref=dailydev)
 
 **문제해결**
 
 - 0703: Gasip에서 유저 토큰값이 로그아웃 후 재로그인해도 업데이트 되지 않는 이슈 해결
+- 0706: Gasip에서 모달 배경을 눌렀을 때 모달이 닫히도록 backdrop구현하는 과정
 
 **안드로이드**
 
