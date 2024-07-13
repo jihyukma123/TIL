@@ -215,6 +215,7 @@
 - https://github.com/facebook/react-native/tree/main/packages/react-native/ReactAndroid/src/main/java/com/facebook/react/bridge
 - [JS] object getter, defineProperty, function call overhead
 - jscodeshift
+- [JS] Stale Closures
 
 ## 공부 기록
 
