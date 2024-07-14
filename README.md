@@ -216,6 +216,7 @@
 - [JS] object getter, defineProperty, function call overhead
 - jscodeshift
 - [JS] Stale Closures
+- 나는 어떤 개발자인가? 나만의 특색이 뭐지?
 
 ## 공부 기록
 
