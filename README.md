@@ -217,6 +217,8 @@
 - jscodeshift
 - [JS] Stale Closures
 - 나는 어떤 개발자인가? 나만의 특색이 뭐지?
+- [RN] 무슨 앱을 만들더라도 공통적으로 처리해야되는 이슈들 (ex. 아이콘 생성 및 추가)
+- [RN] Touchable vs Pressable
 
 ## 공부 기록
 
