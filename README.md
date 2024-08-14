@@ -219,6 +219,7 @@
 - 나는 어떤 개발자인가? 나만의 특색이 뭐지?
 - [RN] 무슨 앱을 만들더라도 공통적으로 처리해야되는 이슈들 (ex. 아이콘 생성 및 추가)
 - [RN] Touchable vs Pressable
+- [안드로이드] [App Startup Time](https://developer.android.com/topic/performance/vitals/launch-time?_gl=1*1dqby5c*_up*MQ..*_ga*MTI2MDIyOTgzMy4xNzIzNTk5MzQ1*_ga_6HH9YJMN9M*MTcyMzU5OTM0NS4xLjAuMTcyMzU5OTM0NS4wLjAuMA..#warm)
 
 ## 공부 기록
 
