@@ -248,6 +248,7 @@
 - 0129: useRef
 - 0414: useReducer의 사용에 대한 공부
 - 0507: useContext 공부(문서 더 읽어야 함)
+- 0817: Headless Component
 
 **JavaScript & TypeScript**
 
