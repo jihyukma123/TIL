@@ -221,6 +221,7 @@
 - [RN] Touchable vs Pressable
 - [안드로이드] [App Startup Time](https://developer.android.com/topic/performance/vitals/launch-time?_gl=1*1dqby5c*_up*MQ..*_ga*MTI2MDIyOTgzMy4xNzIzNTk5MzQ1*_ga_6HH9YJMN9M*MTcyMzU5OTM0NS4xLjAuMTcyMzU5OTM0NS4wLjAuMA..#warm)
 - Raster, Vector, PNG, SVG
+- [RN] `app.json`, `AppRegistry` 의 역할 및 연관성에 대한 이해
 
 ## 공부 기록
 
