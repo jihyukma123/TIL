@@ -222,6 +222,7 @@
 - [안드로이드] [App Startup Time](https://developer.android.com/topic/performance/vitals/launch-time?_gl=1*1dqby5c*_up*MQ..*_ga*MTI2MDIyOTgzMy4xNzIzNTk5MzQ1*_ga_6HH9YJMN9M*MTcyMzU5OTM0NS4xLjAuMTcyMzU5OTM0NS4wLjAuMA..#warm)
 - Raster, Vector, PNG, SVG
 - [RN] `app.json`, `AppRegistry` 의 역할 및 연관성에 대한 이해
+- [DRY] 0823에 읽어봤던 아티클에 대해서 더 이해하는 시간이 필요함(관심사 분리 측면에서)
 
 ## 공부 기록
 
@@ -301,6 +302,7 @@
 - 0622: “가독성 좋은 코드” 란 무엇일까?(토스 컨텐츠)
 - 0630: 당연하지만 놓치기 쉬운, 서비스 개발자라면 인지해야될 예외처리에 대한 반성
 - 0704: [The Death of the Junior Developer](https://sourcegraph.com/blog/the-death-of-the-junior-developer?ref=dailydev)
+- 0823: 잘못된 DRY원칙 및 추상화
 
 **문제해결**
 
