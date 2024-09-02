@@ -244,6 +244,7 @@
 - 0630: Kotlin udemy course
 - 0808: `useNativeDriver`
 - 0811: RN Firebase 설정할 때 Podfile에서 헷갈리는 부분
+- 0902: 드디어 앱 심사 완료! 고생했어.
 
 **React**
 
