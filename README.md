@@ -274,6 +274,7 @@
 - 0622: async await의 정확한 스펙/실행흐름 등에 대해서 딥다이브
 - 0625: Promise.race()
 - 0823: `&&` logical AND 연산자 및 이를 활용한 ShortCircuiting 시 주의할 점.
+- 1129: hoisting이 발생하는 원인
 
 **Functional Programming**
 
