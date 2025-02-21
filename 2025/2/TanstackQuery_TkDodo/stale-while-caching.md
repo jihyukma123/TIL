@@ -122,3 +122,4 @@ HTTP 스펙에 stale content에 대한 Cache-control에 대한 내용이 존재�
 # 추가로 생각해볼만한 부분들
 
 - 컴포넌트 구조와 API 응답 구조 간의 상관관계.
+- [web.dev 글 about stale-while-revalidate](https://web.dev/articles/stale-while-revalidate)
