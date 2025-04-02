@@ -10,6 +10,7 @@
   - LangChain
   - Gitlab
 - FastAPI + python
+  - python async programming에 대한 이해 필요(blocking non blocking 등등)
 - React + TypeScript
 
 # ELSE
