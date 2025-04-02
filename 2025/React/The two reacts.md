@@ -102,3 +102,4 @@ RSC를 조금 더 탐구해보면서 관련 글들을 같이 읽어봐야할 듯
 - https://www.youtube.com/watch?v=TQQPAU21ZUw
 - https://github.com/reactjs/rfcs/blob/main/text/0188-server-components.md
 - https://www.youtube.com/watch?v=ozI4V_29fj4
+- https://github.com/reactwg/server-components/discussions/4
