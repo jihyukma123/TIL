@@ -75,4 +75,30 @@ Server 컴퓨터에서 UI를 만들면 client에 도착했을 때는 그냥 html
 
 Server data는 server에 저장되어 있음 -> data가 저장되어 있는 곳에서 컴포넌트 코드가 실행되는게 맞다...
 
-일단 UI의 특성을 고려해야겠지.
+근데 이러면 어쨌든 같은 컴포넌트 안에서 server상태로 렌더링 되는 부분과, client 상태를 기준으로 렌더링 되는 부분을 별도로 처리할 수 있어야한다는 것 아닌가? (server부분은 server에서 만들어서 html가져오고, client는 코드 실행하고..)
+
+이게 돼??
+
+# RSC?
+
+이거 결국 RSC 이야기인듯?
+
+[reddit post](https://www.reddit.com/r/reactjs/comments/18yqalb/the_two_reacts/)에서 dan이 직접 언급한 내용들을 보면 RSC를 언급하고 있고, RSC가 사람들이 SSR이라고 많이 알고 있는데 아니라고 함.(흔한 오해인데 들을때마다 짜증난다고..ㅋㅋㅋ)
+
+React관점에서 SSR이란 일반적으로 `HTML 생성`을 의미한다. JS가 loading되는 동안 initial state를 담은 HTML을 유저에게 보여주는 것.(SEO에 좋다 그래서..)
+
+RSC는 component computation을 두 부분으로 분리하고자 하는 패러다임
+
+- ahead of time 처리가 필요한 케이스(build 시 or server)
+- client 컴퓨터에서 실행되는 부분
+
+`RSC is a way to compose data requirements and computation ahead of time — not emit HTML (which is what SSR is).`
+
+솔직히 무슨 소리인지 잘 이해는 안된다.ㅠ
+
+RSC를 조금 더 탐구해보면서 관련 글들을 같이 읽어봐야할 듯.
+
+- https://tech.kakaopay.com/post/react-server-components/
+- https://www.youtube.com/watch?v=TQQPAU21ZUw
+- https://github.com/reactjs/rfcs/blob/main/text/0188-server-components.md
+- https://www.youtube.com/watch?v=ozI4V_29fj4
