@@ -62,4 +62,16 @@ RAG는 출처를 제공할 수 있음. 출처가 되는 문서를 함께 제공�
 
 RAG에서는 an information retrieval component가 있음.
 
-이 컴포넌트는
+이 컴포넌트는 user input을 기반으로 새로운 data source에서 정보를 뽑음.
+
+그리고 user input과 뽑아낸 relevant info를 모두 LLM에 전달한다.
+
+그리고 LLM은 학습된 데이터와 새롭게 전달받은 데이터를 모두 받아서 향상된 정보를 제공함.
+
+## Overview
+
+1. Create External Data
+
+`외부 데이터`라고 함은 LLM의 학습 데이터 외의 데이터를 말함.
+
+데이터는 다양한 source에서 다양한 형태로 존재할 수 있는데, `embedding language models`라는 또 다른 AI기술을 사용해서 데이터를 수치값으로 변환해서 vector 데이터베이스에 저장한다.
