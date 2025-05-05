@@ -6,6 +6,50 @@
 
 목표: help frontier models produce better, more relevant responses
 
+# [MCP 글](https://www.anthropic.com/news/model-context-protocol)에 대해서 더 자세하게 읽어보았음.. 이해가 잘 안돼서.
+
+AI도구 -> chatGPT, Claude 같은 LLM기반 대화형 AI도구들.
+
+AI도구는 한계가 존재함(학습된 데이터가 아닌 내용에 대한 정보를 제공하지 못함.)
+
+학습된 데이터는 특정 시점의 snapshot이므로 특정 시점 이후의 데이터나, 특정 주체가 소유하고 있는 커스텀한 데이터에 대한 지식이 없음.
+
+근데 많은 경우에 우리가 AI도구를 사용해서 풀고자 하는 문제는 이런 실시간성 데이터나, 우리가 가지고 있는 커스텀한 DB에 대한 정보가 필요하다.
+
+이 관점에서 봤을 때 2가지 주체가 존재함. ChatGPT 같은 LLM기반 AI도구와, 데이터를 가지고 있는 system.
+
+MCP는 이 서로 다른 시스템들을 연결하는 standard가 되는 방법을 제시하고자 함. `universal하고 open`한 방법을 제공해 LLM이 더 연관성있고 도움이 되는 답변을 제공할 수 있도록 하는 것이 목적이다.
+
+기존에 이런게 없었나? 아니 있었지 근데 문제는, fragmented integration with a single protocol 형식이라는 점이었음.
+-> 이 부분이 좀 이해가 안됨. fragmented integration의 예시에 대해서 찾아봤음. 예를 들면 날씨 정보와, 해당 유저의 스케줄을 알기 위해서 캘린더에 접근해야되는 경우를 생각해보자. 이 경우에 기존에는 날씨 API를 해당 API가 요구하는 방식으로 연동하고, 또 캘린더 정보도 필요한 방법으로 조회해오는 2가지 처리, 즉 필요한 data source가 요구하는 각각 integration방법대로 별도로 작업을 해서 처리했어야 함. -> 이거를 하나의 프로토콜로 맞춰서 동일한 방식으로 날씨 정보와 캘린더 정보를 가져올 수 있는 방법을 제공하고 싶다는 것.
+
+---
+
+그래서 개발자들이 이거 어떻게 쓰는데??
+
+두 가지 중 하나임.
+
+- expose data through MCP servers
+- build AI Applications that connect to these servers(MCP Client)
+
+오케이 그러면 내가 해야되는 일은, MCP 형식으로 데이터에 접근할 수 있는 서버를 만들거나, 아니면 MCP형식으로 데이터를 제공하는 서버와 MCP방식으로 연결가능한 client를 만들거나.
+
+# MCP서버 하나 만들어보기
+
+일단 MCP client들은 많으니까, MCP client에 붙여서 사용할 수 있는 MCP서버를 하나 만들어보자.
+
+MCP서버를 만드는데 어떤 서버를 만들거냐면, cursor에 내가 원하는 code snippet을 만들어주는 mcp. 이를 위해서는 LLM에 내가 원하는 형식의 데이터 만들어달라고 요청해야하고, 이거를 받아서 로컬 cursor 디렉토리에 정해진 형식으로 저장해야 함.
+
+만들어주는 걸 LLM이 하고, MCP를 통해서 외부 시스템과 연계한다는 것이 포인트.
+
+연습용으로 한 번 만들어보고, 필요하면 더 추가해보자.
+
+만드는 것의 과정은 약간 이런 느낌임.
+
+딱 앉았어.
+
+내가 이런 것들을 하고 싶은데 LLM + 외부 세계 데이터를 사용해야 할 것 같아. 이걸 어떻게 custom agent로 mcp 이용해서 만들까?
+
 # 상황에 대한 인식?
 
 왜 이런 아이디어를 떠올리게 되었는지 같은 부분에 대해서 다음과 같이 설명함.
