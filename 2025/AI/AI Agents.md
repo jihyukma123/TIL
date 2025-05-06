@@ -62,3 +62,13 @@ ai workflows can only follow predefined paths set by humans
 1단계 LLM: LLM에 인풋 제공하고 아웃풋 받음.
 2단계 AI Workflow: LLM에 인풋과 predefined process path를 제공해서 여러 단계를 걸쳐서 원하는 작업을 처리한 아웃풋을 받음. 인간이 의사결정 판단 주체
 3단계 AI Agent: AI Agent가 주어진 인풋을 처리하기 위한 작업과 필요한 도구를 추론해서 처리함. Reasoning -> Act -> (필요시) Iteration 이 과정을 알아서 하는 것.
+
+# [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
+
+앤트로픽에서 올려준 글을 보면, 사람들마다 `agent`라는 것을 조금씩 다르게 이해한다고 함.
+
+앤트로픽에서는 `workflow`와 `agent`로 구분짓는다고...
+
+workflow - Workflows are systems where LLMs and tools are orchestrated through predefined code paths.
+
+agent - on the other hand, are systems where LLMs dynamically direct their own processes and tool usage, maintaining control over how they accomplish tasks.
