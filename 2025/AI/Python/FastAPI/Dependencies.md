@@ -134,3 +134,76 @@ class B {}
 **참고자료**
 
 - [FastAPI에서의 의존성 주입: 유연하고 확장 가능한 서비스 구조 만들기](https://devocean.sk.com/blog/techBoardDetail.do?ID=167025&boardType=techBlog)
+
+# (추가) FastAPI에서 Depends로 의존성을 처리하는 목적
+
+코드를 보다보니 왜 그냥 그대로 함수 parameter로 넘겨도 되는 값을 왜 FastAPI에서 제공하는 Depends함수를 사용해서 넘기는지 궁금증이 생겼음.
+
+그냥 그렇게 처리하면 나머지는 FastAPI가 처리해준다고 하고 넘어갔었는데 도대체 뭘 처리해준다는 것인지??
+
+일단 공식 문서부터 다시 제대로 읽어보자.
+
+`Depends`는 single parameter만 받는다. 보통 함수 같은 것들을 전달하며 전달한 함수는 내가 호출하는게 아니라, fastapi가 해당 router함수가 호출되는 시점에 같이 처리해준다.
+
+FastAPI가 처리하는 작업은,
+
+- 맞는 파라미터를 전달해서 dependency 호출(예시 코드에서는 common_parameters함수를 호출)
+- 호출 결과 받아서
+- 명시된 router함수 parameter에 할당.
+
+```python
+async def common_parameters(q: str | None = None, skip: int = 0, limit: int = 100):
+    return {"q": q, "skip": skip, "limit": limit}
+
+# /에 대한 요청이 오면 common_parameters 함수에 router함수에 전달된 parameter중 매칭되는 parameter가 있는지보고 매칭되는 parameter랑 같이 해서 해당 함수를 호출한다. 그리고 결과로 반환된 dict를 commons parameter에 할당
+# 함수 안에서는 common_parameters 함수 호출이나 q,skip, limit parameter를 명시적으로 처리할 필요 없이 commons dict받아서 원하는 작업하면 됨.
+@app.get("/")
+def read_root(commons: Annotated[dict, Depends(common_parameters)]):
+    return {"Hello": "World"}
+
+```
+
+share되는 코드를 한 번만 작성해서 여러 path operation들이 공유할 수 있게 해준다.
+
+share되는 공통 파라미터 처리 로직인 common_parameters를 주입받아서 fastapi가 처리할 수 있도록 하는 구조.
+
+이렇게 처리하는 것의 장점 중 하나는, 함수 parameter에 주입되는 값의 type이 보존되어서 auto complete등 처리가 가능하다는 점.
+
+## 아니 그래서 그냥 함수에 parameter 수동으로 전달하는거랑 무슨 차이인데..?
+
+만약에 매번 공통으로 받는 parameter가 있다고 했을 때, Depends가 없으면 어떻게 처리해야되지?
+
+```python
+@app.get("/items/")
+def read_items(q: Optional[str] = None, skip: int = 0, limit: int = 100):
+    return {"q": q, "skip": skip, "limit": limit}
+```
+
+이런 식으로 매번 명시적으로 query parameter를 명시해서 받아서 사용해야 한다.
+
+`parameter`를 재사용하는 구조가 가능해진다. 외부에서 주입받을 명시적 변수를 선언하는게 아니라, 주입받을 함수를 분리해서 해당 함수에서 필요한 값을 반환하는 의존성 주입 구조를 통해서
+
+또한 db 세션 같은 객체를 주입하는 경우를 생각해보면, 또 하나의 장점은 close()등 중요한 필수 수행 로직이 반드시 실행되는 구조를 만들 수 있다는 점(실행의 일관성, 휴먼에러 방지, 재사용성 개선)
+
+```python
+def get_db():
+    db: Session = SessionLocal()
+    try:
+        yield db  # 이 값을 endpoint 함수에 주입해줌
+    finally:
+        db.close()  # 응답 후 자동으로 호출됨!
+
+
+@app.get("/items/")
+def read_items(db: Session = Depends(get_db)):
+    # 여기서 db 사용
+    items = db.query(Item).all()
+    return items
+```
+
+그렇구낭. 그냥 함수를 전달하는 것보다 어떤 값을 전달하는 느낌으로 주입할 수 있고, 그 parameter에 할당되는 값을 반환하는 함수를 통해서 parameter재사용이나, 로직 공통화 같은 작업을 수행할 수 있다.
+
+그냥 함수나 값을 주입하면? 아래 작업을 못해. Depends를 쓰면 이게 가능함.
+
+- parameter를 알아서 매칭시켜서 내 함수에 전달해줌(아니면 매번 줄줄이 써야할수도..?)
+- 고정 로직 수행도 가능함(Dependencies with yield라고 해서 `To do this, use yield instead of return, and write the extra steps (code) after.` 라고 공식문서에도 언급되어 있다.)
