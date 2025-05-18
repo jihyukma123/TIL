@@ -152,3 +152,17 @@ Input데이터가 명세된 타입이나 제약사항에 맞지 않더라도, �
 `ValidationError`는 입력된 데이터가 특정 type이 아닐 때 발생하는 것이 아니라, 명세된 type으로 parsing이 될 수 없을 때 발생함.
 
 문서에서는 `parsing`이라는 표현은 JSON parsing의 맥락에서만 사용할 예정.(validation -> input값을 명세된 output으로 생성 가능한지 여부 확인, parsing - json 처리)
+
+# Field
+
+Field클래스가 제공하는 기능들.
+
+- defaults="" 을 통해서 기본값 줄 수 있음
+- default_factory를 통해서 기본값 생성을 함수 실행으로 처리할 수 있음.
+  - default_factory=lambda: someFunc() 이런 식으로 람다함수 형식으로도 선언 가능함.
+- alias를 줘서 해당 클래스 생성 시 alias로 데이터 전달할 수 있도록 할 수 있음.
+- 여러가지 제약사항을 부여할 수 있음.
+
+# BaseSettings
+
+`BaseSettings`라는 클래스 상속하는 클래스 만들어서 전체 설정같은 코드 사전에 추가할 수 있음.
