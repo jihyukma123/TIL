@@ -70,8 +70,43 @@ RAG에서는 an information retrieval component가 있음.
 
 ## Overview
 
-1. Create External Data
+**1. Create External Data**
 
 `외부 데이터`라고 함은 LLM의 학습 데이터 외의 데이터를 말함.
 
 데이터는 다양한 source에서 다양한 형태로 존재할 수 있는데, `embedding language models`라는 또 다른 AI기술을 사용해서 데이터를 수치값으로 변환해서 vector 데이터베이스에 저장한다.
+
+이 과정을 통해서 생성형 AI 모델들이 이해할 수 있는 knowledge library가 생성됨
+
+**2. 연관된 정보 retrieve**
+
+user query가 vector representation으로 변환되고, vector DB에서 연관성이 높은 데이터를 조회함. `relevancy search` 가 수행되는 것
+
+이 `연관성 - relevancy`는 수학적 벡터 계산과 representation으로 구하는 것.
+
+**3. LLM 프롬프트 보완**
+
+RAG모델은 user query(prompt)를 조회된 연관성 높은 데이터로 증강함(augument)
+
+이 단계에서는 LLM과 효율적으로 소통하기 위해서 프롬프트 엔지니어링 기술이 사용됨.
+
+이 증강된 프롬프트가 사용자의 쿼리에 대한 정확한 답변 생성을 가능케 한다.
+
+**4. 외부 데이터 최신 상태 유지하기**
+
+외부 데이터가 stale되면 어떡함?? 최신 데이터임을 보장하기 위해서 데이터를 업데이트하는 어떤 구조를 만들어서 신경써야한다는 점.
+
+- automated real-time processes로 하거나,
+- periodic batch processing으로 하거나 등등.
+
+# 유데미 강의
+
+# RAG key components
+
+## Retrieval
+
+## Generator
+
+## RAG Triad
+
+Query - Response - Context 삼각형.
