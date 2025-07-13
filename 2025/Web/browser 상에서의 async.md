@@ -35,8 +35,9 @@
 # 또 좀 공부를 해보고 싶어서(for the last time please!!)
 
 [Jake Archibald: 루프 속 - JSConf.Asia](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
+[어쨌든 이벤트 루프는 무엇입니까? | Philip Roberts | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
-영상 하나 봄 ㅎㅎ
+영상 하나 봄 ㅎㅎ (하나 더 봄)
 
 ## Main Thread
 
@@ -218,3 +219,166 @@ Promise를 사용할 때, 실행 순서나 이런 것에 대해서 정확히 이
 Getting my code to run in the correct part of the event loop
 
 중요하지 중요하지. 뭐가 좀 애매하다 안된다 싶을 때 일단 setTimeout으로 때려박으면 it kind of works but i am not sure 같은 상황을 피하는데 도움이 된다.
+
+# heap/stack/event loop/callback queue/WebAPIs in V8
+
+## the call stack
+
+JS is a single threaded runtime
+
+one thread === one call stack === one thing at a time
+
+```javascript
+function foo() {
+  throw new Error("error");
+}
+
+function bar() {
+  foo();
+}
+
+function baz() {
+  bar();
+}
+
+baz();
+
+// browser 상에서 foo - bar - baz로 이어지는 함수 목록을 보게 되는데 이게 바로 stack trace이고 여기서 말하는 stack 이란 call stack.
+// 즉 call stack에 쌓여있는 함수를 역순으로 추적하면서 연관된 코드를 다 보여준다.
+```
+
+## 근데 진짜 하나만 할 수 있나 브라우저에서..?
+
+web api에 있는 코드(예를 들어서 5초의 timeout이 할당된 setTimeoue의 callback 함수)는 timer가 완료되는 등 조건이 충족되면 바로 call stack에 주입되는게 아니라, task queue에 전달됨. 그리고 task queue에 있는 작업을 event loop가 stack/task queue를 확인해서 call stack이 비어있고 task queue에 작업이 있으면 그 작업을 처리함.
+
+# JavaScript Visualized - Event Loop, Web APIs, (Micro)task Queue
+
+[영상](https://www.youtube.com/watch?v=eiC58R16hb8)
+
+Call Stack + Web APIs + Event Loop + Task Queue + Microtask Queue 조합을 통해서 비동기 작업을 non-blocking 방식으로 처리할 수 있음.
+
+## long running tasks
+
+실제 앱 개발 시 오래 걸리는 작업들을 처리하는 경우가 많음.
+
+- network request
+- anything based on user input
+- timers
+
+Call Stack에서 기다리는 처리를 하면 다른 작업이 막히겠지. 그래서 브라우저에서 Web APIs를 사용한다.
+
+- fetch
+- setTimeout
+- localStorage
+- indexedDB
+- document
+- 등등..
+
+Web APIs는 브라우저가 제공하는 기능들을 사용할 수 있는 인터페이스임.
+
+## Web APIs가 근데 왜 언급되는거임??
+
+Some of the Web APIs allow us to offload the long running tasks to the browser
+
+그리고 이런 비동기 처리를 제공하는 Web API들은 2가지 방식이 있음. Callback based/Promise Based
+
+### Callback based
+
+```javascript
+navigator.geolocation.getCurrentPosition(
+  (position) => console.log(position),
+  (error) => console.error(error)
+);
+```
+
+만약에 이 코드로 인해서 browser가 유저에게 권한을 요청하는 프롬프트를 띄워도 브라우저의 실행이 막히지는 않음 왜? 이 작업은 call stack이 아니라 브라우저가 백그라운드에서 처리하는 작업이니까.
+
+그리고 백그라운드에서 작업이 완료되면?? 바로 Call Stack으로 밀어넣지 않음 앞서 말했듯이 그렇게 처리하면 진행중인 Task에 예측이 어려운 문제를 발생시킬 수 있음.
+
+그러면 어디로 작업을 보내서 어떻게 처리하는가?
+
+여기서 바로 `Task Queue`랑 `Event Loop`이 등장한다.
+
+`Task Queue`는 Web API 콜백함수와 이벤트 핸들러 함수들을 실행 가능한 시점에 실행되도록 담는 자료구조이고, `Event Loop`는 Call Stack이 비어있는지 보고 Task Queue에 있는 작업을 콜스택으로 전달해서 처리되도록 한다.
+
+Callback 기반 Web APIs 인터페이스를 통해서 실행이 예정된 Callback 들은 비동기 작업이 완료되면 Task Queue에 전달되고, Event Loop에 의해서 Call Stack이 빈 시점에 Call Stack에 전달되어서 실행된다.
+
+### Promise based
+
+Promise기반 작업을 할 때는 항상 `Microtask Queue`를 가지고 작업하는 것임.
+
+Microtask Queue는 다음 4가지 경우에만 사용됨
+
+- then-catch-finally 에 전달되는 callback
+- await 뒤에 이어지는 함수 실행
+- queueMicrotask API 콜백
+- new MutationObserver에 전달되는 callback
+
+이 함수들만 마이크로태스크 큐에 전달됨
+
+그리고 태스크큐에 있는 작업들과 마찬가지로 이벤트 루프가 보고 콜스택으로 전달되어서 처리된다고 한다.
+
+근데 그러면, 태스크 큐에 잇는 작업이랑 마이크로태스크 큐에 있는 작업 중에서 뭐가 먼저 처리됨? 둘 다 작업이 존재한다고 쳤을 때?
+
+마이크로태스크 큐에 있는 작업이다.
+
+동작하는 방식이
+
+- MiQ에 있는 작업을 다 먼저 처리함. 잇으면 일단 다 처리하고 그동안 다른 작업이 존재해도 상관없음.
+- TQ에 있는 작업을 처리하다가도, 한 작업을 끝낸 다음에 MiQ에 들어온 작업들이 있으면 또 그거부터 들어와있는거 다 처리함.
+- MiQ에 작업을 처리하는 속도만큼 계속 밀어넣으면? 계속 MiQ에 있는것만 처리함.
+
+`fetch()` Web API를 예시로 보자.
+
+fetch가 call stack에서 실행되면 이 코드 자체는 그냥 Web API를 통해서 promise object를 만드는 역할을 함
+
+- PromiseState: pending, PromiseResult: undefined, PromiseFulfillReaction: 아직 없음
+- 그리고 백그라운드 네트워크 요청을 initiate
+
+```javascript
+fetch() // 생성된 promise 객체: PromiseState: pending, PromiseResult: undefined, PromiseFulfillReaction: 아직 없음
+  .then((res) => console.log(res)); // PromiseFulfillReaction: callback 함수인 res => console.log(res)
+```
+
+그리고 서버가 어떤 결과를 반환하면
+
+- Promise 객체: PromiseState: fulfilled, PromiseResult: Response(서버가 반환한 결과)
+
+그리고 then callback이니까 MiQ에 전달됨.
+
+# test
+
+```javascript
+Promise.resolve().then(() => console.log(1));
+
+setTimeout(() => console.log(2), 10);
+
+queueMicrotask(() => {
+  console.log(3);
+  queueMicrotask(() => console.log(4));
+});
+
+console.log(5);
+```
+
+내 생각에는, 우선 전체 코드가 call stack에 순서대로 처리됨
+
+1. Promise객체 생성 -> Web API에 등록, 바로 res 되니까 MiQ에 지금 log(1) 존재
+
+2. setTimeout 실행 -> 10ms는 금방 끝나니까 거의 바로 bg에서 task queue에 log(2) 콜백 존재
+
+3. 마이크로태스크 큐에 log 3등록하고, Log 4 등록
+
+4. log 5 실행
+
+그러면 microtask queue에 지금, 흠 근데 잘 모르겠다고 생각되는 부분이, promise resolve가 먼저야 아니면 queueMicrotask가 먼저야..?
+
+일단 5로 시작해서 2로 끝나는건 알겠는데,
+
+5 1 3 4 2
+
+5 3 4 1 2 인지 모르겠네
+
+5 4 3 4 2 임 왜냐하면, Promise.resolve()를 실행해서, then 함수가 실행되어서 함수가 등록되는 시점에 이미 resolve 된 상태.
+
+그래서 바로 callback이 MiQ로 전달된다.
