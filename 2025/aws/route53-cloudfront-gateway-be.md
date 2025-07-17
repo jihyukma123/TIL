@@ -58,3 +58,44 @@ Hosted Zone: myapp.com
 - Multivalue Answer라는, IP주소 몇개를 반환해서 기본적인 load balancer의 기능 수행
 - Weighted routing이 가능해서, 리소스 A,B에 각각 트래픽을 정해진 비율(ex. 8:2)로 전달 가능
 - 전달된 IP 기반으로 트래픽 routing가능
+
+
+# CloudFront
+
+CDN 서비스.
+
+## CDN
+
+예를 들어, 미국 특정 YouTube서버로 영상이 업로드된 상황을 가정해보자.
+
+이 비디오는 전세계에 있는 `Edge location`이라고 부르는, 서버들에 전달되어서 캐싱된다고 한다.
+
+이렇게 처리하면 사용자들은 각자 위치한 곳에서 가까운 곳의 `Edge Location`에서 해당 동영상 정보를 받을 수 있어서 퍼포먼스가 향상됨.
+
+CDN은 이런 구조를 활용해서 퍼포먼스를 개선하는 메커니즘임.
+
+## CloudFront에 대한 이해
+
+CloudFront에서는 `Distribution`이라는 것을 생성함. 
+
+이 `Distribution`안에는 origin이라고 하는, 실제 리소스가 어디에 위치해있는지에 대한 정보가 있음.
+
+실제 리소스는 전세계에 퍼져있는 Edge Location이랑, Regional Edge Cache라는 서버들에 캐싱됨.
+
+가까운 위치로 접속해서 리소스를 받아오니까 Latency가 줄어들어서 performance가 개선됨.
+
+그리고 추가로, CloudFront를 사용하면 AWS가 관리하는 통신망인 AWS Global Network를 사용하므로 성능과 연결안정성이 향상됨.
+
+## Lambda@Edge
+
+사용자에게 가까운 위치에서 람다 함수로 데이터 처리가 가능토록 해주는 기능이라고 함. 재밌네.
+
+약간 그 네트워크 시간에 배운 그거랑 좀 비슷한거같은데, 엣지 컴퓨팅? 사용자와 가까운 곳에서 데이터를 처리해서 네트워크 지연시간을 최소화하는 기술
+
+CloudFront Cache 서버들에서 람다함수 실행해서 캐싱된 contents가 있으면 사용자 가까운 곳에서 람다함수 실행.
+
+또한 이런 식으로 Origin과 User사이에 존재하는 Caching layer에서 람다함수 실행이 가능한 구조에서는, 필요하다면 람다 함수를 사용해서 사용자의 요청을 처리해서 Origin으로 전달하거나, 반대로 origin의 response를 특정 방식으로 처리해서 사용자에게 반환하는 식의 처리도 가능함.
+
+## 보안 기능 제공
+
+HTTPS, AWS ACM, AWS Shield/WAF, OAI 등 보안 수준을 강화할 수 있는 방법들을 제공함.
