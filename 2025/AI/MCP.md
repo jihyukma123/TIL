@@ -190,3 +190,36 @@ Just like any other http requests
 ## Streamable HTTP
 
 - ing...(다른 업무 진행으로 잠시 stop인데 집에서 이어서 진행할 예정)
+
+# MCP 추가 설명
+
+https://www.youtube.com/watch?v=RhTiAOGwbYE
+
+MCP -> LLM이 써드파티 플랫폼과 연계할 수 있도록 설명을 제공하는 가이드라고 생각하면 됨.
+
+MCP는 LLM에게 써드파티 플랫폼과 소통하기 위해서 필요한 `Context`를 제공한다.
+
+how can agents discover and use mcps?
+
+- mcp는 클라이언트 서버 아키텍처로 동작함
+- Agent는 MCP클라이언트를 사용해서 서버와 소통
+
+MCP서버는 tool외에 Resources와 Prompts 총 3가지 요소를 expose할 수 있음.
+
+## resources
+
+예를 들어, 환불이 가능한 항공권만 예약하고 싶은 유저가 있다고 생각해보자.
+
+그러면 환불에 대한 규정을 LLM이 참고해서 mcp로 데이터를 땡겨와서 답변을 해야지 정확할 수 있음.
+
+MCP에는 이런 데이터도 resources라는 key값을 가지는 형태로 제공할 수 있게 되어있다고 함.
+
+MCP서버에는 tool 만 정의하는게 아니라, resources도 정의할 수 있다는 점!(말그대로 필요한 `context`를 제공하는 목적이니까.)
+
+## prompts
+
+미리 정해진 형태의 프롬프트를 보고, 어떤 도구를 호출해야될지 llm이 더 정확하게 파악할 수 있도록 컨텍스트를 제공하는 목적
+
+사전에 정의된 프롬프트 템플릿 혹은 가이드라인이라고 볼 수 있음.
+
+tools/resources를 어떻게 조합해서 작업을 처리할 수 있는지에 대한 사용 설명서 같은 역할이라고 함.(바로 이해는 잘 안되는데 조금 더 찾아봐야할듯?)
