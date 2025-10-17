@@ -490,3 +490,109 @@ MCP는 서버가 클라이언트에게 정보 변화에 대해 알릴 수 있도
 AI앱에서는 알림을 받으면 바로 요청을 보내서 unified_tool_registry를 업데이트함. (SSOT겠지 아마?)
 
 이후 대화에서는 바로 이 SSOT를 참조하니까 업데이트된 도구를 가져다가 사용할 수 있겠지.
+
+# Understanding MCP Servers
+
+Apps in ChatGPT들은 다 MCP 서버니까 이걸 이해하고 가야함.
+
+ChatGPT가 클라이언트이고 내가 그 안에서 호출할 수 있는 도구를 전달하려고 MCP 서버를 구현해야됨.
+
+MCP servers are programs that expose specific capabilities to AI applications through standardized protocol interfaces.
+
+세 가지 핵심요소를 활용해서 기능을 제공
+
+- Tools
+- Resources
+  - 제어주체가 Application 이라는데...흠...이 부분이 좀 이해가 잘 안되네
+- Prompts
+  - pre-built 템플릿임. LLM에 특정 tool/resource를 활용해서 작업을 처리하라는 지시를 내리도록 하는..
+  - 제어주체가 user로 되어있는데, 아마 유저가 이 프로그램 어떻게 쓰지 하고 프롬프트 몇 개 넣어볼 수 있게 제공하거나 하는 목적이려나..? Sample Question 같은 느낌?
+
+## Tool 사용 시나리오
+
+도구의 경우 실행 전에 사용자의 동의를 받아서 help users maintain control over actions taken by a model
+
+```json
+// Tool 정의
+{
+  "name": "searchFlights",
+  "description": "Search for available flights",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "origin": { "type": "string", "description": "Departure city" },
+      "destination": { "type": "string", "description": "Arrival city" },
+      "date": {
+        "type": "string",
+        "format": "date",
+        "description": "Travel date"
+      }
+    },
+    "required": ["origin", "destination", "date"]
+  }
+}
+
+// 호출할 때는 정의대로 호출하면 됨
+searchFlights(origin: "NYC", destination: "Barcelona", date: "2024-06-15")
+
+```
+
+MCP는 도구 호출 시나리오 안에서 필요에 따라 사람이 개입할 수 있도록 신경썼음.
+
+앱들은 아래와 같은 메커니즘을 도입해서 user의 control 정도를 높여줄 수 있음.
+
+- 사용가능한 tool 목록을 유저에게 UI로 표시(최초에 tools/list 를 통해서 받아온 목록의 정보를 토대로 표시하는걸로 이해함)해서 유저들이 특정 interaction 할 때 해당 tool이 사용가능할지에 대해서 결정할 수 있게 함
+- 개별 tool 실행 전에 동의 여부 묻기
+- 특정 작업 시 사전에 권한 허용 확인
+- 모든 도구 실행 및 출력 결과 내역을 보여주는 활동 로그
+
+핵심은, LLM이 자율적으로 도구의 호출을 판단해서 처리하지만, 사용자가 언제든지 얼마든지 필요에 따라서 도구 호출 프로세스를 제어할 수 있다는 점(or so it was meant)
+
+## Resource 사용 시나리오
+
+AI 앱이 가져다가 LLM 모델에 컨텍스트로 제공할 수 있는 정보를 제공하고자 하는 목적.
+
+모든 리소스는 유니크한 URI를 가져야함.
+
+그리고 MIME type을 명시해서 잘 처리될 수 있도록 해야함.
+
+Resource는 기본적으로 LLM한테 목록이 제공되는게 아님. 사용자가 필요한 경우에 명시적으로 Resource를 요청해서, LLM에 질의할 때 전달하는 메커니즘을 만들던가 해서 어쨌든 사용자/시스템에 의해서 fetch되어서 LLM에 주입되는 형식(LLM이 먼저 리소스 목록 보고 이 리소스 나 필요할거같은데 하는 구조가 아니라는 뜻)
+
+## Prompt 사용 시나리오
+
+재사용 가능한 템플릿을 제공함.
+
+MCP 서버 제작자가
+
+- 변수를 삽입해서 완성해서 사용할 수 있는 프롬프트 제공
+- MCP 서버를 잘 사용할 수 있는 예시를 제공
+  할 수 있음.
+
+어떻게 사용자에게 프롬프트를 보여줄 수 있는가?(일반적인 사용성)
+
+- `/`를 입력해서 사용 가능한 프롬프트 보기
+- UI 버튼
+
+# 관련 지식
+
+## MIME..?
+
+MIME Type이 뭔지 몰랐는데 알아보려고 함 리소스에서 개념이 등장해서
+
+MIME Type은 인터넷을 통해 전송되는 리소스(파일, 문서)의 형식과성격을 식별하기 위해 사용되는 표준화된 문자열.
+
+미디어타입 혹은 콘텐츠 타입이라고 불리며 원래는 이메일 첨부파일 처리를 위해서 고안된 표준에서 유래함.
+(MIME = Multipurpose Internet Main Extensions)
+
+타입/서브타입의 두 부분으로 구성
+
+구조 예시
+
+- `text/html`: Text카테고리에 속하는 HTML문서(웹페이지)
+- `image/png`: Image카테고리에 속하는 PNG형식의 이미지 파일
+- `application/json`: Application 카테고리에 속하는 JSON 형식의 데이터
+- `video/mp4`: Video 카테고리에 속하는 MP4 형식의 비디오 파일
+
+역할은? 데이터를 받는 클라이언트(주로 웹 브라우저)에게 해당 리소스를 어떻게 처리해야되는지 알려주는 것임.
+
+데이터를 전송할 때, '지금 전달하는 데이터(body)는 이런 형식으로 구성되어 있으니 이 형식에 맞춰서 해석하고 처리해~~' 하고 알려주는 것.
