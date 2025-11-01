@@ -43,7 +43,7 @@ Human in the loop 기능이 있어서, 기계가 라벨링하되 사람이 검�
 
 - Feature Store: 머신러닝 Feature를 중앙에서 저장/관리/검색/공유하는 관리형 저장소, 온/오프라인 스토어 모두 제공
 - Data Wrangler: 데이터 전처리 도구
-- Clarify: 데이터 모델의 Bias와 설명 가능성(explainable)을 분석하는 기능
+- Clarify: 데이터 모델의 Bias와 설명 가능성(explainable)을 분석하는 기능. 모델 설명 (Model Explanations)도 같이 제공(예측이 이루어진 이유를 설명)
 - Model Cards: 모델의 메타데이터, 성능, 의도된 사용 등을 문서화 하는 기능
 - Model Monitor: 머신러닝 모델 품질 모니터링하는 서비스
 - JumpStart: 사전 학습된 여러 파운데이션 모델을 포함하고 있어, 모델 탐색 → 배포까지 흐름이 간소화되어 있음
@@ -110,6 +110,9 @@ Human in the loop 기능이 있어서, 기계가 라벨링하되 사람이 검�
 - AWS Config: 모든 AWS리소스의 구성을 추적하고 정책 위반 여부를 평가
   - 시간에 따른 구성 변경 이력을 기록하여 감사 및 추적성을 제공, '리소스 설정이 정책에 맞는가?'를 실시간으로 점검하고 자동 경고 가능
 - AWS HealthScribe: 의료용 음성·대화 AI 서비스로, 환자-임상의(doctor) 대화를 녹음/전사하고 - 이 대화를 바탕으로 임상 노트(진료기록 요약)를 자동 생성할 수 있게 설계
+- Amazon Augmented AI (Amazon A2I): 완전관리형 서비스로, 기계학습(ML) 예측 결과에 대해 **사람의 검토(human review)**를 손쉽게 결합할 수 있게 해주는 도구
+- Amazon Q Business는 기업의 **내부 데이터 소스(예: Confluence, SharePoint, Amazon S3 등)**에 연결하여 직원들이 질문하고, 요약하고, 컨텐츠를 생성할 수 있도록 설계된 생성형 AI 기반의 업무용 챗봇 서비스입니다.
+- Amazon Bedrock PartyRock: PartyRock은 코딩 없이 생성형 AI 기반 앱을 구축, 사용 및 공유할 수 있는 실습적 앱 빌더입니다. 개발자가 아닌 사람들도 쉽게 생성형 AI의 기본 사항을 배우고 신속한 엔지니어링 기술을 실험할 수 있습니다.
 
 ## 학습의 종류
 
@@ -196,3 +199,39 @@ Continued Pre-training
 - Diffusion → 이미지나 오디오 등 생성 모델에 사용됨 (예: Stable Diffusion).
 - Transformer → 자연어 처리, 번역, 요약 등에 쓰이는 모델 구조(architecture).
 - Multi-modal → 텍스트+이미지 등 여러 형태의 데이터를 함께 다루는 모델.
+
+## ROUGE? BLEU?
+
+텍스트 요약 평가의 업계 표준(Gold Standard) 지표는 ROUGE이며, 이는 특히 **재현율(Recall)**에 중점을 두어 생성된 요약문이 참조 요약문의 핵심 정보를 얼마나 잘 포착했는지 측정
+
+BLEU score (Bilingual Evaluation Understudy score): 원래는 **기계 번역(Machine Translation)**의 성능을 평가하기 위해 고안되었지만, 텍스트 요약과 같은 다른 텍스트 생성 작업에서도 모델의 출력과 참조 텍스트 간의 n-그램(n-gram) 중복을 측정하는 전통적인 지표로 널리 사용됩니다
+
+- 예를 들어 인간 번역과 기계 번역 사이의 상대적인 품질 비교에 사용. 얼마나 유사한지 비교하는 정량적 지표
+
+## Shapley Values??
+
+Shapley 값은 모델의 투명성과 설명 가능성(Transparency and Explainability)를 충족하는 핵심적인 솔루션
+
+## Generation Step?
+
+Amazon Bedrock의 **파운데이션 모델(FM)**을 사용하여 이미지의 디테일이나 추상성을 제어하려면 생성 단계(Generation step) 매개변수를 수정해야 합니다.
+
+**Generation step (생성 단계):**
+
+이미지 생성 모델(주로 확산 모델(Diffusion Model) 같은 잠재 공간 모델)에서 생성 프로세스를 완료하는 데 걸리는 단계 수를 나타냅니다.
+
+이 값은 종종 **샘플링 단계(Sampling steps)**라고도 불립니다.
+
+일반적으로 단계 수가 많을수록 모델이 더 많은 계산을 수행하고 **더 높은 충실도(fidelity)**와 더 세부적인(detailed) 이미지를 생성합니다.
+
+단계 수가 적을수록 이미지는 더 빨리 생성되지만, 덜 세부적이거나 더 추상적인/덜 구체적인 모습을 보일 수 있습니다.
+
+## Distillation
+
+증류, 크고 좋은 모델의 지식을 작고 효율적인 모델로 전달하는 과정
+
+모델 크기를 줄이고 속도를 높이는 데 사용됨
+
+## 회귀(Regression)
+
+입력 변수를 기반으로 연속적인 수치값을 예측하는 작업
