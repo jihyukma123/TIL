@@ -23,6 +23,8 @@ Transfer Learning은 이미 학습된 모델의 지식을 다르지만 비슷한
 
 기존 모델을 기반으로 새로운 작업에 맞게 조정하는데 사용하기 좋음.
 
+특정한 작업에 대해 학습된 모델을 가져와서 관련된 다른 작업의 모델을 fine-tuning 하는데 사용
+
 **epoch 에포크**
 
 학습이 데이터 전체를 한 번 모두 통과하는 횟수
@@ -43,12 +45,13 @@ Human in the loop 기능이 있어서, 기계가 라벨링하되 사람이 검�
 
 - Feature Store: 머신러닝 Feature를 중앙에서 저장/관리/검색/공유하는 관리형 저장소, 온/오프라인 스토어 모두 제공
 - Data Wrangler: 데이터 전처리 도구
-- Clarify: 데이터 모델의 Bias와 설명 가능성(explainable)을 분석하는 기능. 모델 설명 (Model Explanations)도 같이 제공(예측이 이루어진 이유를 설명)
+- Clarify: 데이터 모델의 Bias와 설명 가능성(explainable)을 분석하는 기능. 모델 설명 (Model Explanations)도 같이 제공(예측이 이루어진 이유를 설명), 설명 가능성을 제공한다는 것은 모델의 예측에 개별 입력 특징이 어떻게 영향을 미치는지 보여줄 수 있단 소리임.
 - Model Cards: 모델의 메타데이터, 성능, 의도된 사용 등을 문서화 하는 기능
 - Model Monitor: 머신러닝 모델 품질 모니터링하는 서비스
 - JumpStart: 사전 학습된 여러 파운데이션 모델을 포함하고 있어, 모델 탐색 → 배포까지 흐름이 간소화되어 있음
 - Canvas: 노코드 머신러닝 서비스. 클릭만으로 데이터 업로드 -> 모델 생성 -> 예측까지 가능
 - Ground Truth: 데이터 라벨링(Data Labeling) 서비스, 자동화된 데이터 라벨링 파이프라인을 구축, 사람이 직접 데이터를 라벨링할 수도 있고, 기계 학습 기반 자동 라벨링(Auto-labeling) 을 활용할 수도 있어.
+- Use MLflow with Amazon SageMaker to track, organize, view, analyze, and compare iterative ML experimentation to gain comparative insights and register and deploy your best-performing models.
 
 ## 기타
 
@@ -93,6 +96,7 @@ Human in the loop 기능이 있어서, 기계가 라벨링하되 사람이 검�
 - AWS CloudFront: CDN 서비스
 - Amazon Lex: 음성/텍스트 기반 대화형 챗봇 만드는 서비스
 - Amazon Comprehend: NLP(텍스트 분석) 서비스로, 문서나 문장에서 의미를 추출
+  - 예를 들면, 고객 피드백에서 감정이나, 의도 등을 분석해낼 수 있음.
 - AWS CloudTrail: AWS 계정 내에서 발생하는 모든 API 호출 내역을 기록
 - AWS Audit Manager: 컴플라이언스 감사 자동화 서비스, '우리 시스템이 규정을 잘 지키고 있는가?'를 문서화하고 보고하는 역할
 - Amazon Fraud Detector: 온라인 사기 탐지 서비스
@@ -113,6 +117,11 @@ Human in the loop 기능이 있어서, 기계가 라벨링하되 사람이 검�
 - Amazon Augmented AI (Amazon A2I): 완전관리형 서비스로, 기계학습(ML) 예측 결과에 대해 **사람의 검토(human review)**를 손쉽게 결합할 수 있게 해주는 도구
 - Amazon Q Business는 기업의 **내부 데이터 소스(예: Confluence, SharePoint, Amazon S3 등)**에 연결하여 직원들이 질문하고, 요약하고, 컨텐츠를 생성할 수 있도록 설계된 생성형 AI 기반의 업무용 챗봇 서비스입니다.
 - Amazon Bedrock PartyRock: PartyRock은 코딩 없이 생성형 AI 기반 앱을 구축, 사용 및 공유할 수 있는 실습적 앱 빌더입니다. 개발자가 아닌 사람들도 쉽게 생성형 AI의 기본 사항을 배우고 신속한 엔지니어링 기술을 실험할 수 있습니다.
+- Amazon Kendra: 기계학습 기반의 지능형 엔터프라이즈 검색 서비스. 회사 내부나 조직 내에 흩어져 있는 수많은 문서, 파일, 데이터베이스 등의 다양한 데이터를 모아서, 사용자가 자연어 질문을 했을 때 가장 정확하고 관련성 높은 답변과 정보를 찾아주는 서비스
+- Amazon Nova Reel은 일반적으로 짧고 매력적인 릴스나 소셜 미디어 동영상을 빠르게 생성하는 데 최적화된 모델로 알려져 있으며, 콘텐츠 회사에서 요구하는 창의적인 짧은 형식의 동영상 생성에 적합합니다.
+- Amazon Nova Pro는 더 길거나 복잡한 프로덕션 수준의 동영상에 사용될 수 있지만, 두 옵션 모두 수동 편집 없이 동영상을 직접 생성한다는 점에서 A/B보다 훨씬 효율적입니다.
+- AWS Glue Data Quality는 데이터 레이크 및 데이터 웨어하우스의 데이터셋에 대한 품질 규칙을 정의하고 모니터링하는 데 사용
+- Amazon Mechanical Turk provides an on-demand, scalable, human workforce to complete jobs that humans can do better than computers.
 
 ## 학습의 종류
 
@@ -156,6 +165,7 @@ Supervised Learning (지도 학습):
 - 목표: 새로운 입력($x$)이 주어졌을 때 올바른 정답($y$)을 예측하는 것입니다.
 - 주요 태스크: 분류 (Classification) 및 회귀 (Regression).
 - KNN, Decision Tree, Support Vector machine(SVM)
+- 어떤 학습 방법들이 지도 학습에 속하는지 알아야함(비지도 학습도...)
 
 Unsupervised Learning (비지도 학습):
 
@@ -168,6 +178,10 @@ Federated Learning(연합 학습):
 
 - 여러 조직이 장치가 자신의 데이터를 중앙에 모으지 않고 AI모델을 공동으로 학습시키는 기술
 - 데이터는 로컬에, 학습 결과만 중상 서버로 공유, 데이터 프라이버시와 규제에 유리
+
+강화학습
+
+- 뭐하는건지 알아야함.
 
 ## AWS Bedrock Guardrails
 
@@ -184,6 +198,8 @@ Recall: 진짜 정답 중에 몇개를 잡아냈나.
 F1 score = precision과 recall을 모두 고려
 
 ## Fine Tuning vs Continued pre-training
+
+파인튜닝은 레이블된 데이터 사용, cpt는 unlabeled 데이터 사용
 
 파인튜닝
 
@@ -235,3 +251,72 @@ Amazon Bedrock의 **파운데이션 모델(FM)**을 사용하여 이미지의 �
 ## 회귀(Regression)
 
 입력 변수를 기반으로 연속적인 수치값을 예측하는 작업
+
+## Nova 시리즈..
+
+Nova Lite - 멀티모달, 저렴함, 속도 빠름
+Nova Pro - 멀티모달, 정확하고 더 비쌈, 최적의 조합 제공
+Nova Canvas - 고품질 이미지 생성
+Nova Reel - 비디오 생성
+
+## 데이터 관련 정책
+
+- A. Data de-identification (데이터 비식별화): 개인 식별 정보를 제거하여 개인이 누구인지 알 수 없도록 만드는 과정입니다. (예: 이름, 주소 삭제 또는 암호화)
+- 데이터 보존 Data retention: 데이터 저장 및 삭제에 대한 지침과 정책
+
+## 모델 종류
+
+- VAE (Variational Autoencoder) 주로 데이터 압축, 잠재 공간 학습, 간단한 이미지/데이터 생성에 사용됩니다. 텍스트의 장거리 종속성 및 유창한 문단 구조를 모델링하는 데 LLM만큼 효과적이지 않습니다.
+
+- 확산 모델 (Diffusion model) 주로 고품질 이미지 및 오디오 생성에 사용됩니다. 텍스트 생성에 적용될 수 있지만, 현재는 트랜스포머 기반 LLM이 텍스트 작업에서 지배적이며, 대규모 제품 설명을 생성하는 데 있어 가장 효율적이고 입증된 방법입니다.
+
+- GAN (Generative Adversarial Network) 주로 현실적인 이미지 생성에 사용됩니다. 텍스트 생성에도 사용되지만, 텍스트의 불연속적인 특성으로 인해 학습이 불안정하고, 긴 문맥의 일관성을 유지하는 데 트랜스포머 기반 모델보다 어려움을 겪습니다.
+
+## 선형회귀/로지스틱 회귀
+
+선형회귀 - 연속적인 수치를 예측하는데 사용되는 모델
+
+- 예를 들어서, 공부 시간에 따른 시험 점수 예측
+
+로지스틱 회귀
+
+- 이름은 '회귀'인데 실질적으로는 분류 문제(특히 이진 분류를 위해서 사용됨)
+- 주어진 입력이 특정 범주에 속할 확률을 0과 1 사이의 값으로 예측함.
+
+## 결정트리
+
+결정트리는 만약/그렇다면 이라는 규칙을 여러 개 사용해서 데이터를 분할
+
+결정 트리 모델의 장점은 해석하기 쉽다는것(일련의 조건이 있다는 것 자체가 예측을 설명함. 이 과정을 시각적으로 문서화 하는 것 또한 용이하다.)
+
+## artifact vs audit manager
+
+Audit Manager - 능동적인 증거 수집 및 평가 자동화 도구 (사용자의 AWS사용에 대한 감사 증거 수집 및 평가를 자동화하고 간소화)
+Artifact - AWS의 규정 준수 관련 문서 및 보고서를 제공하는 저장소.(AWS의 보안 및 규정 준수 문서를 온디맨드로 제공)
+
+## Top P/Top K/Temperature
+
+## 기타 내용들 정리
+
+- FM: self-supervised learning을 통해서 레이블을 만들어서 학습하고, fine-tuning은 보통 label 이 있는 데이터를 활용해서 supervised learning으로 미세조정
+- hyperparameter: 머신러닝 모델의 학습 과정을 제어하기 위해서 사용자가 직접 설정하는 외부 설정값
+- Exploratory Data Analysis (EDA): 데이터셋의 주요 특징을 분석하고, 이상값이나 패턴을 발견하며, 나아가 데이터를 모델링에 적합하게 준비하는 초기 단계
+  - Data Preparation과의 차이점: 데이터 준비는 전처리나 정리 등을 말하는거임.
+- Data Augmentation - Data augmentation is a technique used primarily in machine learning to artificially increase the size and variability of the training dataset by creating modified versions of the existing data, such as flipping images or adding noise.
+- Amazon DeepRacer: 강화 학습(Reinforcement Learning, RL)을 쉽고 재미있게 배울 수 있도록 설계된 AWS(Amazon Web Services)의 서비스이자 교육 플랫폼
+- 샤플리값 vs Partial Dependence Plots(PDP) - 머신러닝 모델의 해석과 관련
+  - 샤플리값: 특정 개별 예측값에 대한 각 특성(Feature)의 기여도를 정량화하는 데 사용
+  - PDP는 데이터셋 전체 수준에서 특정 특성(Feature)과 모델의 예측값 사이의 관계를 시각적으로 보여줍니다.
+- model invocation logging 써서 다음 데이터 수집가능: invocation logs, model input data, and model output data for all invocations in your AWS account used in Amazon Bedrock
+  - CloudTrail은? API 호출 추적은 가능하긴한데, 다만 input/output 데이터 안보이고 이보다는 접근제어와 보안 용도로 사용
+- 하나의 리전은 최소 2개의 AZ로 구성, 하나의 AZ는 최소 하나의 데이터 센터 가지고 있음
+- 과적합 해결책 2가지
+  - 우선 모델 복잡도 제어(하이퍼파라미터 조정) 해보고,
+  - 그 다음에 데이터 양 늘리기
+- Amazon Polly: Text to Speech (여러 언어 지원)
+- Transcribe: Speech to Text
+- Amazon Comprehend: 이해한다는거잖아. 머신러닝 써서 텍스트 안의 인사이트와 관계 파악.
+- 지도학습 종류
+  - 선형회귀, 로지스틱 회귀, 결정트리, 뉴럴 네트워크
+- Amazon Q Developer is powered by Amazon Bedrock.
+- BLEU -> 번역 퀄리티 평가에 가장 많이 사용되는 지표
