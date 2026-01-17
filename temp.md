@@ -16,3 +16,4 @@
     - localhost 관련 네트워크 개념 복습
   - 원인 뿐만 아니라, 근본적인 해결책도 같이 고민해보는 자세가 필요함.
 - https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices -> Agent Skills를 잘 활용하는 방법에 대한 Anthropic 기술 블로그 읽어보기
+- In real production environments, it is rarely a single process. Usually, server-side processes like authorization servers or your own rest apis or applications are clustered as several instances of the same process behind a load balancer.
