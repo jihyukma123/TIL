@@ -17,3 +17,6 @@
   - 원인 뿐만 아니라, 근본적인 해결책도 같이 고민해보는 자세가 필요함.
 - https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices -> Agent Skills를 잘 활용하는 방법에 대한 Anthropic 기술 블로그 읽어보기
 - In real production environments, it is rarely a single process. Usually, server-side processes like authorization servers or your own rest apis or applications are clustered as several instances of the same process behind a load balancer.
+- 여러 기술들의 시간에 따른 변화를 개별적으로 나눠서 보는 것도 중요한데, 서로 함께 사용되는 기술들의 변화를 큰 시간축에 따라서 한 번 엮어서 어떻게 서로 영향을 주면서 'IT system as a whole'이 변화해왔는지 이해하는 것도 기술적인 성장에 큰 도움이 되지 않을까 하는 생각이 들었다. (인증/보안 Udemy 강의 듣는데, 지금 내가 익숙한 IT 시스템 구조로 어떻게 변화왔는지 이해하는게 강의 내용을 이해하는데 도움이 되었음.)
+  - IT의 역사가 생각보다 오래되었다는 것....내가 생각하는 이런 'fancy'한 현대의 시스템들도 있지만, 어디에서부턴가 발전해왔다.
+  - 뭐하나 당연한게 없다. 내가 지금 한 번 로그인 하면 사내문서/메신저/메일에 다 접근이 되는데, 이게 가능한 메커니즘을 적용해둬서 가능한거지 당연히 되는게 아님. 다 그렇게 만들어져있으니까 그렇게 쓸 수 있다는 점을 알아야함.(이런 관점에서 생각해본적이 없다. 너무 추상화된 시스템 기반에서 일을 하다보니 이런 점을 보기가 좀 힘들다는 생각이 들었음. 로그인 딸깍 -> SSO로 다 됨. React -> 딸깍하면 UI 나옴. 백엔드? 메모리/자원 등 내가 직접적으로 관리할 일이 많이 줄어들었음 그냥 클라우드에서 설정 몇개 하면 알아서 해줌. 그렇다보니까 추상화된 레이어가 있을 뿐 그 아래에는 하나하나 내려가면 상위 레이어를 구현한 하위 레이어가 존재한다는 점을 인지하기가 쉽지가 않음. 하지만 알아야지. 나는 알아야하는 사람이다.)
