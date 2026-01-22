@@ -26,3 +26,4 @@
 - oh-my-opencode, LSP??
 - wisdom/actionplan 기록과 일상 사이의 갭을 메꿔주는 Agent skill
 - AI-DLC
+- (Agent 기반 공부 내용 피드백)**3. Stateful vs Stateless** -> LDAP/SAML -> Stateful한 세션 기반 인증이 주였다고 함. OAuth 2.0/JWT로 넘어오면서 Stateless 한 인증이 가능해졌음. 이 차이가 마이크로서비스(MSA) 환경에서 왜 결정적인지 고민해보면 좋다. (힌트: 서버를 수평 확장(Scale-out)할 때 세션 데이터는 어디에 있어야 할까?)
