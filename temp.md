@@ -27,3 +27,28 @@
 - wisdom/actionplan 기록과 일상 사이의 갭을 메꿔주는 Agent skill
 - AI-DLC
 - (Agent 기반 공부 내용 피드백)**3. Stateful vs Stateless** -> LDAP/SAML -> Stateful한 세션 기반 인증이 주였다고 함. OAuth 2.0/JWT로 넘어오면서 Stateless 한 인증이 가능해졌음. 이 차이가 마이크로서비스(MSA) 환경에서 왜 결정적인지 고민해보면 좋다. (힌트: 서버를 수평 확장(Scale-out)할 때 세션 데이터는 어디에 있어야 할까?)
+- https://news.hada.io/topic?id=25949 AI 에이전트를 위한 좋은 스펙 작성법
+- Garbage in, Garbage out
+  - 비효율적인 프로세스를 자동화하면, 단지 '쓰레기를 더 빨리 생산하는' 결과로 이어짐
+    - 고객에게 안내할 때, 무턱대고 하는게 아니라 프로세스부터 PI를 제대로 하고 AX로 넘어가는게 좋은 과정이다.
+- AI Literacy 교육에서는, LLM 특성에 대한 이해가 어느정도는 필요하지 않은지??
+  - 그리고 나도 알아야 한다. 왜 프롬프트를 잘 쓰는게 중요하다는 것인지?
+- LLM의 input/output 은 결국 text이기 때문에, 프롬프트가 제일 중요하다.
+  - 결국 프롬프트고, 잘 작성된 프롬프트가 복잡한 Agent Code보다 gets the job done.
+- Context Compact -> 좋은 신호가 아니다. 원래라면 Overflow error가 발생했을 상황이라는거니까, 어찌보면 단위 쪼개는게 잘 안되었을 수가 있는거임. (생각의 전환이 필요하구나.)
+- json, Markdown, YAML 등 다양한 데이터 표현 방식 중에서 어떤게 적합할 것인지?
+  - YAML을 선택한 이유 -> 사람이 읽느냐, LLM만 읽느냐도 방식 선택에 영향을 주는 요소인듯?
+- Skill의 백그라운드가 어떻게 되느냐?
+  - Continue: 역할별로 모델 구분 가능
+- LLM -> 자꾸 다음 작업을 하려고 하는, 현재 작업스코프에 없는 작업(자의적으로 해석하고 확률적으로 행동하는데)을 하려고 하는데 이를 제거하는 시스템이 필요할 수 있음(Phase Gate)
+  - 이와 같이 LLM이 작업을 처리할 떄 반복적으로 보이는 경향성에 대한 이해가 필요하다(경험적인 부분인 듯.)
+- Cursor를 거의 쓰지 않고 터미널에서만 작업을 한다...
+  - 무슨 일이 발생하는지에 대한 이해.
+- Agentic coding에서 제일 의존성이 없어야되는게 뭘까? 모델임
+  - Anthropic 등등은 싫어하겠지만...model agnostic하게, 동일한 프롬프트 workflow input/output condition등등을....모델/환경 독립적으로 할 수 있는게 좋음.
+
+- Swagger/Postman을 자연스럽게 사용할 수 있어야 함.
+  - curl 등....이런 도구 관련 이슈는 최소한도로는 없어야 하지 않을까?
+- 컴파일 가능한 스펙..?
+- Agent Workflow <<<<< Contenxt management
+- [앤트로픽 엔지니어링 블로그 글](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)
