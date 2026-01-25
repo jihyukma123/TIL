@@ -52,3 +52,6 @@
 - 컴파일 가능한 스펙..?
 - Agent Workflow <<<<< Contenxt management
 - [앤트로픽 엔지니어링 블로그 글](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)
+- Codex cli 쓰다보니까, usage limit에 생각보다 너무 빨리 도달한다.
+  - 작업별로 토큰을 얼마나 썼는지는 어떻게 알지?
+  - 어떻게 하면 똑같은 작업을 해도 토큰을 더 적게 소모하면서 동일한 결과를 얻어낼 수있지?(방법을 모르겠음.) -> 이게 중요할 것 같은데 비용 문제라.
