@@ -61,3 +61,4 @@
   - 나는 누구나 반복가능한 일을 하고 있진 않은가?
   - 나는 불안, 망설임, 책임, 실패 가능성을 견디며 그 시간을 통과하고 있는가?
   - 나는 AI에 지능과 판단을 위탁하고 있는가? 아님 스스로 결정하며 사유하는 주체인가?
+- your ability to progress without hard skills is bound to how good the llms are
