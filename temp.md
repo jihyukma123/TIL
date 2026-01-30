@@ -62,3 +62,6 @@
   - 나는 불안, 망설임, 책임, 실패 가능성을 견디며 그 시간을 통과하고 있는가?
   - 나는 AI에 지능과 판단을 위탁하고 있는가? 아님 스스로 결정하며 사유하는 주체인가?
 - your ability to progress without hard skills is bound to how good the llms are
+- 커리어초기에 죽었다 생각하고 일하고 공부해서 궤도에 빨리 오를수록 더 적은 에너지로 유영이 가능하다
+
+
