@@ -65,3 +65,7 @@
 - 커리어초기에 죽었다 생각하고 일하고 공부해서 궤도에 빨리 오를수록 더 적은 에너지로 유영이 가능하다
 - 연습은 지옥같고 시합은 즐겁다. 일상으로 돌아가는 것이 두렵다..
 - 방법(React로 웹을 만드는 방법, 설치하는 방법 등)이 아니라 원리(JavaScript 작성해서 사용자에게 웹이 표시되는 과정)을 이해해야된다.
+- Codex cli 비주얼라이징 도구..?
+- Google UDP(Catching up with google ai stack/architecture)
+- Harness Engineering
+- Build!!! but with retrospect
