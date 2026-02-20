@@ -69,3 +69,6 @@
 - Google UDP(Catching up with google ai stack/architecture)
 - Harness Engineering
 - Build!!! but with retrospect
+- AI-DLC -> 너무 md 파일로 다 제어하려고 한다...?
+  - System Prompt가 차지하는 컨텍스트 윈도우가 많아서 실제 코드를 자꾸 줄여버릴려고 하지 않는지..?
+- LRU 캐시가 뭐야?
