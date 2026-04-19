@@ -73,3 +73,4 @@
   - System Prompt가 차지하는 컨텍스트 윈도우가 많아서 실제 코드를 자꾸 줄여버릴려고 하지 않는지..?
 - LRU 캐시가 뭐야?
 - https://cassidoo.co/post/good-brain/?ref=dailydev
+- 지수적 backoff? -> AI가 권고했는데 뭔지 모르겠음.
