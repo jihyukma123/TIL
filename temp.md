@@ -74,3 +74,4 @@
 - LRU 캐시가 뭐야?
 - https://cassidoo.co/post/good-brain/?ref=dailydev
 - 지수적 backoff? -> AI가 권고했는데 뭔지 모르겠음.
+- eDiscovery/DLP/SIEM
