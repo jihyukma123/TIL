@@ -23,7 +23,7 @@
 - CORS CORS CORS
 - LLM 이용한 Agent를 만들 때, Code intepreter가 응답 출력 중간에 나오는게 말이 되는 시나리오인가??
   - CustomGPT 만드는데, 자꾸 그래프가 최상단에 뽑혀서 이거를 아래로 내리고 싶은데 방법이 있는지 궁금했음.
-- oh-my-opencode, LSP??
+- oh-my-opencode, LSP?? -> Claude Code를 쓰면서 다시 나왔다 LSP!!! 뭐지 LSP가 Swift LSP를 언급하는데...
 - wisdom/actionplan 기록과 일상 사이의 갭을 메꿔주는 Agent skill
 - AI-DLC
 - (Agent 기반 공부 내용 피드백)**3. Stateful vs Stateless** -> LDAP/SAML -> Stateful한 세션 기반 인증이 주였다고 함. OAuth 2.0/JWT로 넘어오면서 Stateless 한 인증이 가능해졌음. 이 차이가 마이크로서비스(MSA) 환경에서 왜 결정적인지 고민해보면 좋다. (힌트: 서버를 수평 확장(Scale-out)할 때 세션 데이터는 어디에 있어야 할까?)
@@ -75,3 +75,5 @@
 - https://cassidoo.co/post/good-brain/?ref=dailydev
 - 지수적 backoff? -> AI가 권고했는데 뭔지 모르겠음.
 - eDiscovery/DLP/SIEM
+- ES2026
+- https://larsfaye.com/articles/agentic-coding-is-a-trap
