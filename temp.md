@@ -77,3 +77,5 @@
 - eDiscovery/DLP/SIEM
 - ES2026
 - https://larsfaye.com/articles/agentic-coding-is-a-trap
+- Més que un club
+  - 평가하고 비판하기 전에 최선을 다해서 주어진 상황에서 증명을 하고 난 다음에 해라.
