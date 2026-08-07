@@ -82,6 +82,8 @@
 - 동작하는 코드와 생존하는 코드는 다르다.
 - Knowledge flow?
 - GPT 모델 컨텍스트 크기에 따른 할증 비용 평가 -> 두번에 나눠서 호출하는게 나은건지 아니면 컨텍스트가 크더라도 한 번에 처리하는게 나은건지(단순히 비용 관점에서만 보면)
+- I talked when i should have listened, i was harsh when i should have been tender
+
 
 ## 별개로
 
