@@ -106,6 +106,8 @@
   - 근데 기본은 해야되지 않나?
   - 어렵네
 - trying to measure everything, if not possible making a system 수치화(기술적으로는)
+- Learning and becoming better at your craft still is an excellent choice.
+  - what is my 'CRAFT'?
 
 ## 별개로
 
