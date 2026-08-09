@@ -83,7 +83,18 @@
 - Knowledge flow?
 - GPT 모델 컨텍스트 크기에 따른 할증 비용 평가 -> 두번에 나눠서 호출하는게 나은건지 아니면 컨텍스트가 크더라도 한 번에 처리하는게 나은건지(단순히 비용 관점에서만 보면)
 - I talked when i should have listened, i was harsh when i should have been tender
-
+- 단어가 생기고, 그 단어를 사용함으로 인해서 인식이 확장되기도 한다. -> 최근의 AI가 그런 것일까? 그렇다면 어떤 분야의 인식이 확장된 것일까? 기존의 그것과는 다른 것일까? 그런 관점에서 세상을 볼 때 어떤 것들을 알아야하는 것일까?
+- 지적 허영심이 충족된 것처럼 느끼기 쉬운 세상....유튭에서 동기부여나 좋은 말들 관련된 영상을 많이 본다던지..ㅎㅎ...
+  - 하나를 골라서 파고, 복잡성을 뛰어넘는 일을 해야지 복잡성 앞에서 근본적인 불쾌감을 느낀다...
+- 옳은 것보다 중요한 건 친절한 것
+- 대부분의 경우는 연민으로 충분하다 (카뮈)
+- discomfort is the potential for more comfort
+- free my mind from my phone
+  - what does my phone represent? what the world, or the forces 'want' me to see.
+  - they want to trap me inside this.
+- 인지하는 것이 시작이다.
+  - 중요한 건 인지임. 그리고 결정. 나는 어떻게 살 것인가?
+  - 더 좋은 개발자가 되는 과정에서 세상이 주입하는 자극이 나를 방해한다는 걸 인지하는 순간 뭔가 달라졌을까.
 
 ## 별개로
 
