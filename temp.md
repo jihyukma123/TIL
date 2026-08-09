@@ -95,8 +95,11 @@
 - 인지하는 것이 시작이다.
   - 중요한 건 인지임. 그리고 결정. 나는 어떻게 살 것인가?
   - 더 좋은 개발자가 되는 과정에서 세상이 주입하는 자극이 나를 방해한다는 걸 인지하는 순간 뭔가 달라졌을까.
+  - for me, this little screen of my phone and the world it exposing to me was hurting me
 - reading a book is expanding my world, learning new words and expressions
-
+- 복잡성을 마주해서 이겨내는 것에 대한 생각들. 
+  - AI 시대에는 더 필요한....AI가 복잡성을 해결해준다고 착각하지말자.
+- MCP v1 -> v2 비교해보기
 
 ## 별개로
 
