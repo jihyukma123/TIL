@@ -105,6 +105,7 @@
   - 기술에만 매몰되지 말아야 한다. 
   - 근데 기본은 해야되지 않나?
   - 어렵네
+- trying to measure everything, if not possible making a system 수치화(기술적으로는)
 
 ## 별개로
 
