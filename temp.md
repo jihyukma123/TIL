@@ -108,6 +108,10 @@
 - trying to measure everything, if not possible making a system 수치화(기술적으로는)
 - Learning and becoming better at your craft still is an excellent choice.
   - what is my 'CRAFT'?
+- AI를 잘 쓰려면 2가지
+  - 문제 분해 능력
+  - 인내심 혹은 집중력
+- AI is excellent at discovering the 'unknown unknowns'
 
 ## 별개로
 
