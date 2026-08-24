@@ -112,6 +112,7 @@
   - 문제 분해 능력
   - 인내심 혹은 집중력
 - AI is excellent at discovering the 'unknown unknowns'
+- 갈등의 비용을 치르지 않고 원하는 결과를 얻는다.
 
 ## 별개로
 
